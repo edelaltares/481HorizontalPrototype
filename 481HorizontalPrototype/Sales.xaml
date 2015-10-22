@@ -1,0 +1,61 @@
+﻿<Page x:Class="WpfApplication1.Sales"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApplication1"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="292"
+      Title="Sales">
+
+        <Grid Background="White">
+            <Rectangle Fill="#FFEE2D24" HorizontalAlignment="Left" Height="40" Stroke="#FFEE2D2B" VerticalAlignment="Top" Width="292"/>
+            <Rectangle Fill="White" HorizontalAlignment="Left" Height="3" Stroke="White" VerticalAlignment="Top" Width="30" Margin="10,10,0,0"/>
+            <Rectangle Fill="White" HorizontalAlignment="Left" Height="3" Stroke="White" VerticalAlignment="Top" Width="30" Margin="10,16,0,0"/>
+            <Rectangle Fill="White" HorizontalAlignment="Left" Height="3" Stroke="White" VerticalAlignment="Top" Width="30" Margin="10,22,0,0"/>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="45,6,0,0" TextWrapping="Wrap" Text="MENU" VerticalAlignment="Top" Height="25" Foreground="White" FontSize="17.333"/>
+            <TextBlock x:Name="textBlock_Copy" Margin="220,6,0,0" TextWrapping="Wrap" Text="BACK" VerticalAlignment="Top" Height="25" Foreground="#FFEE2D24" FontSize="17.333" OpacityMask="Black" Background="White" Width="62" HorizontalAlignment="Left" Padding="10,0,10,5"/>
+            <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="220,6,0,0" VerticalAlignment="Top" Width="62" Height="25" Opacity="0" Click="salesback"/>
+
+            <Label x:Name="label" Content="Items on Sale" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" FontSize="18.667"/>
+            <!-- ListBox Example. -->
+            <!--ListBox horizontal orientation -->
+
+            <DockPanel>
+                <Frame x:Name="_salesFrame" />
+
+                <ListBox Name="salesListBox" Canvas.Left="0" Canvas.Top="40" Margin="0,80,0,0" HorizontalContentAlignment="Stretch" BorderBrush="{x:Null}">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VirtualizingStackPanel Orientation="Vertical"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Background="#FFE2E2E2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Border Margin="2">
+                                    <Image Source="{Binding Path=imagelocation}" Stretch="Fill" Width="50" Height="50" />
+                                </Border>
+                                <StackPanel Grid.Column="1" Margin="2">
+                                    <StackPanel Orientation="Horizontal" TextBlock.FontWeight="Bold" >
+                                        <TextBlock Text="{Binding Path=name, FallbackValue=Item Name}" Foreground="Black" />
+                                </StackPanel>
+                                <TextBlock TextDecorations="Strikethrough" Text="{Binding Path=oldprice, FallbackValue=$5.99}" Foreground="Red" />
+                                <TextBlock Text="{Binding Path=newprice, FallbackValue=$9.99}" Foreground="Black" />
+                                <TextBlock Text="{Binding Path=availability, FallbackValue=In Stock}" Foreground="Black" />
+                                </StackPanel>
+                                <StackPanel Grid.Column="2" Margin="2">
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Path=aisle, FallbackValue=10}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Foreground="Black" />
+                                </StackPanel>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </DockPanel>
+        </Grid>
+</Page>

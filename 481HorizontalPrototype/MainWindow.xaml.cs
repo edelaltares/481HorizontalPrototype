@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace _481HorizontalPrototype
+namespace WpfApplication1
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,6 +23,46 @@ namespace _481HorizontalPrototype
         public MainWindow()
         {
             InitializeComponent();
+            _mainFrame.Navigate(new SearchBar());
+        }
+
+    }
+
+    public class Product
+    {
+        public Product(String location,String aName, String aPrice, String anAvail, String anAisle)
+        {
+            imagelocation = location;
+            name = aName;
+            price = aPrice;
+            availability = anAvail;
+            aisle = anAisle;
+        }
+
+        public String imagelocation
+        {
+            get;
+            set;
+        }
+        public String name
+        {
+            get;
+            set;
+        }
+        public String price
+        {
+            get;
+            set;
+        }
+        public String availability
+        {
+            get;
+            set;
+        }
+        public String aisle
+        {
+            get;
+            set;
         }
     }
 }
