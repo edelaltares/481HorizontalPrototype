@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="ItemLocator.Search"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ItemLocator"
+             mc:Ignorable="d" 
+             d:DesignHeight="540" d:DesignWidth="400">
+    <StackPanel Background="White">
+        <Image x:Name="Logo" Margin="0,0,0,0" HorizontalAlignment="Center" Height="100" VerticalAlignment="Top" Source="/images/co-opLogo.jpg" Panel.ZIndex="100"/>
+        <Rectangle Fill="#FFEE2D24" Width="400" Height="100" Margin="0,-100,0,0" />
+
+        <!-- SEARCH -->
+        <Label x:Name="searchLabel" Content="Search for items:" FontSize="20" HorizontalAlignment="Left" Height="47" Margin="20,40,0,0" VerticalAlignment="Top" Width="157"/>
+        <TextBox x:Name="searchBox" HorizontalAlignment="Left" Height="18" Margin="20,-10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" TouchEnter="searchBox_TouchEnter" MouseEnter="searchBox_MouseEnter" SpellCheck.IsEnabled="True" Language="en-US"/>
+        <Image x:Name="magGlass" HorizontalAlignment="Left" Height="18" Margin="330,-20,0,0" VerticalAlignment="Top" Width="20" Source="/images/magGlass.png"/>
+
+    </StackPanel>
+</UserControl>
