@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ItemLocator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="400">
+        Title="MainWindow" Height="600" Width="350">
     <Grid Name="theGrid">
+        
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         
         <!-- ROW BG -->
@@ -21,23 +22,22 @@
         <Rectangle Grid.Row="0" Fill="White" HorizontalAlignment="Left" Margin="10,28,0,0" Stroke="White" VerticalAlignment="Top" Width="35" Height="2" Panel.ZIndex="100" />
 
         <!-- MENU LABEL -->
-        <Label Grid.Row="0" Content="MENU" Foreground="White" Margin="50,4,0,0" Padding="0" Width="Auto" Height="Auto" FontSize="20" Panel.ZIndex="100" />
+        <Label Grid.Row="0" Content="MENU" Foreground="White" Margin="50,5,0,0" Padding="0" Width="Auto" Height="Auto" FontSize="20" Panel.ZIndex="100" />
 
         <!-- MENU BUTTON -->
-        <Button Grid.Row="0" x:Name="button" BorderThickness="0" Background="Transparent" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" Width="105" Height="30" Click="ShowMenu" Panel.ZIndex="200" />
+        <Button Grid.Row="0" x:Name="button" BorderThickness="0" Background="Transparent" HorizontalAlignment="Left" Margin="5,4,0,0" VerticalAlignment="Top" Width="105" Height="30" Click="ShowMenu" Panel.ZIndex="200" />
 
-        <!-- STACK PANEL -->
+        <!-- MENU -->
+        <Grid Grid.Row="1" Name="menu" Background="#FFEE2D24" Height="600" Width="150" HorizontalAlignment="Left" Visibility="Hidden" Panel.ZIndex="200">
+            <Button x:Name="homeButton" Foreground="White"  Content="Search" HorizontalAlignment="Left" Height="46" VerticalAlignment="Top" Width="150" Background="#FFEE2D24" BorderBrush="White" BorderThickness="0 0 0 0" Click="HomeButtonClick" Margin="0,0,0,0" Panel.ZIndex="100" />
+            <Button x:Name="mapButton" Foreground="White" Content="Map" HorizontalAlignment="Left" Height="46" Margin="0,46,0,0" VerticalAlignment="Top" Width="150" Background="#FFEE2D24" BorderBrush="White" BorderThickness="0 1 0 0 " Click="MapButtonClick" Panel.ZIndex="100"/>
+            <Button x:Name="salesButton" Foreground="White" Content="Sales" HorizontalAlignment="Left" Height="46" Margin="0,92,0,0" VerticalAlignment="Top" Width="150" Background="#FFEE2D24" BorderBrush="White" BorderThickness="0 1 0 1" Click="SalesButtonClick" Panel.ZIndex="100" />
+        </Grid>
+
         <StackPanel Name="stack1" Grid.Row="1">
-
-            <!-- MENU -->
-            <Grid Name="menu" Background="#FFEE2D24" Height="600" Width="150" HorizontalAlignment="Left" Visibility="Hidden">
-                <Button x:Name="homeButton" Foreground="White"  Content="Search" HorizontalAlignment="Left" Height="46" VerticalAlignment="Top" Width="150" Background="#FFEE2D24" BorderBrush="White" BorderThickness="0 0 0 0" Click="HomeButtonClick" Margin="0,0,0,0" Panel.ZIndex="100" />
-                <Button x:Name="mapButton" Foreground="White" Content="Map" HorizontalAlignment="Left" Height="46" Margin="0,46,0,0" VerticalAlignment="Top" Width="150" Background="#FFEE2D24" BorderBrush="White" BorderThickness="0 1 0 0 " Click="MapButtonClick" Panel.ZIndex="100"/>
-                <Button x:Name="salesButton" Foreground="White" Content="Sales" HorizontalAlignment="Left" Height="46" Margin="0,92,0,0" VerticalAlignment="Top" Width="150" Background="#FFEE2D24" BorderBrush="White" BorderThickness="0 1 0 1" Click="SalesButtonClick" Panel.ZIndex="100" />
-            </Grid>
-
+            
         </StackPanel>
+
     </Grid>
-    
-    
+
 </Window>

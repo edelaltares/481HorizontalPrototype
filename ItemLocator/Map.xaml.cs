@@ -16,23 +16,13 @@ using System.Windows.Shapes;
 namespace ItemLocator
 {
     /// <summary>
-    /// Interaction logic for Search.xaml
+    /// Interaction logic for Map.xaml
     /// </summary>
-    public partial class Search : UserControl
+    public partial class Map : UserControl
     {
-        public Search()
+        public Map()
         {
             InitializeComponent();
-        }
-
-        private void searchBox_MouseEnter(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void searchBox_TouchEnter(object sender, TouchEventArgs e)
-        {
-
         }
     }
 }
