@@ -37,3 +37,5 @@ C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\
 C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\Sales.g.cs
 C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\Map.baml
 C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\Sales.baml
+C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\Results.g.cs
+C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\Results.baml
