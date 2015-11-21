@@ -37,12 +37,46 @@ namespace ItemLocator
 
         private void newSearch(object sender, RoutedEventArgs e)
         {
-            
+            getSearch();
         }
 
-        private void getText(object sender, TextChangedEventArgs e)
+        private void getSearch()
+        {
+            String keywords = searchBox.Text;
+
+            doSearch(keywords);
+        }
+
+        private void getText(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private Product[] doSearch(String keywords)
+        {
+            List<Product> searchList = new List<Product>();
+            List<Product> productList = new List<Product>();
+
+            Product aProduct = new Product("eggs");
+            productList.Add(aProduct);
+
+            Product[] productArray = productList.ToArray();
+
+            int size = productArray.Length;
+
+            for(int i=0; i < size; i++)
+            {
+                if (productList[i].name.Contains(keywords))
+                {
+                    searchList.Add(productList[i]);
+                }
+            }
+
+            Product[] searchArray = searchList.ToArray();
+
+            int sizeSearch = searchArray.Length;
+
+            return searchArray;
         }
     }
 }

@@ -8,5 +8,11 @@ namespace ItemLocator
 {
     class Product
     {
+        public String name;
+
+        public Product(String newName)
+        {
+            name = newName;
+        }
     }
 }
