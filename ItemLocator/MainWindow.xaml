@@ -12,6 +12,11 @@
             <RowDefinition Height="40" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350">
+                
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
         
         <!-- ROW BG -->
         <Rectangle Grid.Row="0" Fill="#FFEE2D24" HorizontalAlignment="Left" Margin="0,0,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="400" Height="40" />
@@ -34,7 +39,7 @@
             <Button x:Name="salesButton" Foreground="White" Content="Sales" HorizontalAlignment="Left" Height="46" Margin="0,92,0,0" VerticalAlignment="Top" Width="150" Background="#FFEE2D24" BorderBrush="White" BorderThickness="0 1 0 1" Click="SalesButtonClick" Panel.ZIndex="100" />
         </Grid>
 
-        <StackPanel Name="stack1" Grid.Row="1">
+        <StackPanel Name="stack1" Grid.Row="1" Grid.Column="0" Width="Auto" Height="Auto" >
             
         </StackPanel>
 

@@ -34,5 +34,15 @@ namespace ItemLocator
         {
 
         }
+
+        private void newSearch(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void getText(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
