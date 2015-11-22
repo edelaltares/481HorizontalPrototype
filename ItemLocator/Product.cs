@@ -6,13 +6,7 @@ using System.Threading.Tasks;
 
 namespace ItemLocator
 {
-    public class Product
+    class Product
     {
-        public String name;
-
-        public Product(String newName)
-        {
-            name = newName;
-        }
     }
 }
