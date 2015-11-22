@@ -20,9 +20,18 @@ namespace ItemLocator
     /// </summary>
     public partial class Search : UserControl
     {
+        MainWindow mainWindow;
+
         public Search()
         {
             InitializeComponent();
+        }
+
+        public Search(MainWindow main)
+        {
+            InitializeComponent();
+
+            mainWindow = main;
         }
 
         private void searchBox_MouseEnter(object sender, MouseEventArgs e)
@@ -44,7 +53,10 @@ namespace ItemLocator
         {
             String keywords = searchBox.Text;
 
-            doSearch(keywords);
+            List<Product> result = doSearch(keywords);
+
+            Results newResult = new Results(result, mainWindow, keywords);
+
         }
 
         private void getText(object sender, RoutedEventArgs e)
@@ -52,13 +64,16 @@ namespace ItemLocator
 
         }
 
-        private Product[] doSearch(String keywords)
+        private List<Product> doSearch(String keywords)
         {
             List<Product> searchList = new List<Product>();
             List<Product> productList = new List<Product>();
 
             Product aProduct = new Product("eggs");
             productList.Add(aProduct);
+
+            Product aProduct1 = new Product("egg nog");
+            productList.Add(aProduct1);
 
             Product[] productArray = productList.ToArray();
 
@@ -72,11 +87,7 @@ namespace ItemLocator
                 }
             }
 
-            Product[] searchArray = searchList.ToArray();
-
-            int sizeSearch = searchArray.Length;
-
-            return searchArray;
+            return searchList;
         }
     }
 }

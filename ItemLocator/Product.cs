@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ItemLocator
 {
-    class Product
+    public class Product
     {
         public String name;
 
