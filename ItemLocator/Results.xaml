@@ -10,16 +10,23 @@
     <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        
-        <Label x:Name="label" Grid.Row="0" Content="Search Results for:" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" FontSize="18.667"/>
-        <Label x:Name="label_Copy" Grid.Row="0" Content="{Binding Path=keyword}" HorizontalAlignment="Left" Margin="160,10,0,0" VerticalAlignment="Top" Width="Auto" Foreground="#FFEE2D24" FontSize="18.667"/>
+
+        <!-- LABEL -->
+        <Label x:Name="resultsLabel" Grid.Row="0" Content="Search results for:" HorizontalAlignment="Left" Margin="0" Width="160" VerticalAlignment="Top" FontSize="18.667" />
+
+        <Label x:Name="keywordLabel" Grid.Row="0" Content="" HorizontalAlignment="Left" Margin="155,0,0,0" VerticalAlignment="Top" FontSize="18.667" />
+
+        <!-- SEARCH -->
+        <TextBox x:Name="resultSearch" Grid.Row="1" Width="150" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" BorderThickness="1" BorderBrush="Black" />
+
         <!-- ListBox Example. -->
         <!--ListBox horizontal orientation -->
 
-        <ScrollViewer Grid.Row="1">
-            <ListBox Control.MouseDoubleClick="itemClick" Name="resultsListBox" Canvas.Left="0" Canvas.Top="40" HorizontalContentAlignment="Stretch" BorderBrush="{x:Null}">
+        <ScrollViewer Grid.Row="2">
+            <ListBox Control.MouseDoubleClick="itemClick" Name="resultsListBox" Canvas.Left="0" Canvas.Top="40" HorizontalContentAlignment="Stretch" BorderBrush="{x:Null}" Height="Auto">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
                         <VirtualizingStackPanel Orientation="Vertical"/>

@@ -20,20 +20,11 @@ namespace ItemLocator
     /// </summary>
     public partial class Search : UserControl
     {
-        MainWindow mainWindow;
-
         public Search()
         {
             InitializeComponent();
         }
-
-        public Search(MainWindow main)
-        {
-            InitializeComponent();
-
-            mainWindow = main;
-        }
-
+        
         private void searchBox_MouseEnter(object sender, MouseEventArgs e)
         {
 
@@ -46,17 +37,15 @@ namespace ItemLocator
 
         private void newSearch(object sender, RoutedEventArgs e)
         {
-            getSearch();
-        }
-
-        private void getSearch()
-        {
             String keywords = searchBox.Text;
 
             List<Product> result = doSearch(keywords);
 
-            Results newResult = new Results(result, mainWindow, keywords);
+            Results newResult = new Results(result, keywords);
 
+            MainWindow main = (MainWindow) Window.GetWindow(this);
+
+            main.newPage(newResult);
         }
 
         private void getText(object sender, RoutedEventArgs e)

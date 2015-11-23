@@ -20,14 +20,13 @@ namespace ItemLocator
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Search search;
+        private Search search = new Search();
         private Map map = new Map();
         private Sales sales = new Sales();
 
         public MainWindow()
         {
             InitializeComponent();
-            search = new Search(this);
             stack1.Children.Add(search);
         }
 

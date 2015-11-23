@@ -20,25 +20,22 @@ namespace ItemLocator
     /// </summary>
     public partial class Results : UserControl
     {
-        public String keyword;
 
         public Results()
         {
             InitializeComponent();
         }
 
-        public Results(List<Product> result, MainWindow main, String searchWord)
+        public Results(List<Product> result, String searchWord)
         {
             InitializeComponent();
 
             if (result != null)
             {
                 resultsListBox.ItemsSource = result;
+                keywordLabel.Content = searchWord;
+                resultSearch.Text = searchWord;
             }
-
-            keyword = searchWord;
-
-            main.newPage(this);
         }
 
         private void clickBack(object sender, RoutedEventArgs e)

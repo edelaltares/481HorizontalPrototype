@@ -71,9 +71,8 @@
     <Compile Include="Sales.xaml.cs">
       <DependentUpon>Sales.xaml</DependentUpon>
     </Compile>
-    <Compile Include="..\..\..\..\..\..\..\Search.xaml.cs">
+    <Compile Include="Search.xaml.cs">
       <DependentUpon>Search.xaml</DependentUpon>
-      <Link>Search.xaml.cs</Link>
     </Compile>
     <Compile Include="Switcher.cs" />
     <Page Include="MainWindow.xaml">
@@ -108,10 +107,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="..\..\..\..\..\..\..\Search.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Search.xaml">
       <Generator>MSBuild:Compile</Generator>
-      <Link>Search.xaml</Link>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
