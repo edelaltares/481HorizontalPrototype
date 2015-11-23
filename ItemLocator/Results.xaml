@@ -9,22 +9,19 @@
 
     <Grid Background="White">
         <Grid.RowDefinitions>
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <!-- LABEL -->
-        <Label x:Name="resultsLabel" Grid.Row="0" Content="Search results for:" HorizontalAlignment="Left" Margin="0" Width="160" VerticalAlignment="Top" FontSize="18.667" />
-
-        <Label x:Name="keywordLabel" Grid.Row="0" Content="" HorizontalAlignment="Left" Margin="155,0,0,0" VerticalAlignment="Top" FontSize="18.667" />
+        <Label x:Name="resultsLabel" Grid.Row="0" Content="Search results for:" HorizontalAlignment="Left" Margin="5,0,0,0" Width="160" VerticalAlignment="Top" Padding="0" FontSize="18.667" />
+        <Label x:Name="keywordLabel" Grid.Row="0" Content="" HorizontalAlignment="Left" Margin="155,0,0,0" VerticalAlignment="Top" Padding="0"  FontSize="18.667" Foreground="#FFEE2D24" />
 
         <!-- SEARCH -->
-        <TextBox x:Name="resultSearch" Grid.Row="1" Width="150" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" BorderThickness="1" BorderBrush="Black" />
+        <TextBox x:Name="resultSearch" Grid.Row="1" Width="150" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" BorderThickness="1" />
 
-        <!-- ListBox Example. -->
-        <!--ListBox horizontal orientation -->
-
+        <!-- LIST OF RESULTS -->
         <ScrollViewer Grid.Row="2">
             <ListBox Control.MouseDoubleClick="itemClick" Name="resultsListBox" Canvas.Left="0" Canvas.Top="40" HorizontalContentAlignment="Stretch" BorderBrush="{x:Null}" Height="Auto">
                 <ListBox.ItemsPanel>

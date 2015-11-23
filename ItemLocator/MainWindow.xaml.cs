@@ -55,52 +55,20 @@ namespace ItemLocator
         
         private void HomeButtonClick(object sender, RoutedEventArgs e)
         {
-            if(stack1.Children.Contains(search))
-            {
-                return;
-            }
-            else if(stack1.Children.Contains(map) || stack1.Children.Contains(sales)) {
-                stack1.Children.Clear();
-                stack1.Children.Add(search);
-            }
-            else
-            {
-                stack1.Children.Add(search);
-            }
+            stack1.Children.Clear();
+            stack1.Children.Add(search);
         }
 
         private void MapButtonClick(object sender, RoutedEventArgs e)
         {
-            if (stack1.Children.Contains(map))
-            {
-                return;
-            }
-            else if (stack1.Children.Contains(search) || stack1.Children.Contains(sales))
-            {
-                stack1.Children.Clear();
-                stack1.Children.Add(map);
-            }
-            else
-            {
-                stack1.Children.Add(map);
-            }
+            stack1.Children.Clear();
+            stack1.Children.Add(map);
         }
 
         private void SalesButtonClick(object sender, RoutedEventArgs e)
         {
-            if (stack1.Children.Contains(sales))
-            {
-                return;
-            }
-            else if (stack1.Children.Contains(search) || stack1.Children.Contains(map))
-            {
-                stack1.Children.Clear();
-                stack1.Children.Add(sales);
-            }
-            else
-            {
-                stack1.Children.Add(sales);
-            }
+            stack1.Children.Clear();
+            stack1.Children.Add(sales);
         }
     }
 }
