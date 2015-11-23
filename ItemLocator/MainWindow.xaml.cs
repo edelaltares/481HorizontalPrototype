@@ -57,18 +57,21 @@ namespace ItemLocator
         {
             stack1.Children.Clear();
             stack1.Children.Add(search);
+            menu.Visibility = Visibility.Collapsed;
         }
 
         private void MapButtonClick(object sender, RoutedEventArgs e)
         {
             stack1.Children.Clear();
             stack1.Children.Add(map);
+            menu.Visibility = Visibility.Collapsed;
         }
 
         private void SalesButtonClick(object sender, RoutedEventArgs e)
         {
             stack1.Children.Clear();
             stack1.Children.Add(sales);
+            menu.Visibility = Visibility.Collapsed;
         }
     }
 }
