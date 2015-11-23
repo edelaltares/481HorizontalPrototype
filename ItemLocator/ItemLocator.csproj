@@ -65,6 +65,9 @@
     <Compile Include="Results.xaml.cs">
       <DependentUpon>Results.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Results_Map.xaml.cs">
+      <DependentUpon>Results_Map.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Sales.xaml.cs">
       <DependentUpon>Sales.xaml</DependentUpon>
     </Compile>
@@ -93,6 +96,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Results.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Results_Map.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -142,6 +149,20 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\magGlass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Products\Meringue_powder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Store\SimpleStoreFinal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Store\Aisle.png" />
+    <Resource Include="images\Store\Bakery.png" />
+    <Resource Include="images\Store\Dairy.png" />
+    <Resource Include="images\Store\Meats.png" />
+    <Resource Include="images\Store\Produce.png" />
+    <Resource Include="images\Store\spindles.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
