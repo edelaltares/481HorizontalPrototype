@@ -5,26 +5,15 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ItemLocator"
              mc:Ignorable="d" 
-             d:DesignHeight="550" d:DesignWidth="350">
-    <Grid Background="White">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="100">
-            </RowDefinition>
-            <RowDefinition Height="Auto">
-            </RowDefinition>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="350" />
-        </Grid.ColumnDefinitions>
-        
-        <!-- LOGO -->
-        <Image x:Name="Logo" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Height="100" VerticalAlignment="Top" Source="/images/co-opLogo.jpg" Panel.ZIndex="100" />
-        <Rectangle Width="350" Height="Auto" Fill="#FFEE2D24" />
-        
+             d:DesignHeight="540" d:DesignWidth="350">
+    <StackPanel Background="White">
+        <Image x:Name="Logo" Margin="0,0,0,0" HorizontalAlignment="Center" Height="100" VerticalAlignment="Top" Source="/images/co-opLogo.jpg" Panel.ZIndex="100"/>
+        <Rectangle Fill="#FFEE2D24" Width="350" Height="100" Margin="0,-100,0,0" />
+
         <!-- SEARCH -->
-        <Label x:Name="searchLabel" Grid.Row="1" Grid.Column="0" Content="Search for an item:" FontSize="20" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="Auto" Margin="5,30,0,0" />
-        <TextBox x:Name="searchBox" Grid.Row="1" Grid.Column="0" Text="{Binding Path=SearchValue}"  HorizontalAlignment="Left" Height="25" Margin="10,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" TouchEnter="searchBox_TouchEnter" MouseEnter="searchBox_MouseEnter" SpellCheck.IsEnabled="True" Language="en-US" TextChanged="getText"/>
-        <Image x:Name="magGlass" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Height="18" Margin="265,70,0,0" VerticalAlignment="Top" Width="20" Source="/images/magGlass.png" Panel.ZIndex="100" />
-        <Button x:Name="searchButton" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Content="Search" Width="70" Height="25" Margin="265,67,0,0" Padding="16,0,0,0" FontSize="14" BorderThickness="0" Click="newSearch" />
-    </Grid>
+        <Label x:Name="searchLabel" Content="Search for items:" FontSize="20" HorizontalAlignment="Left" Height="47" Margin="20,40,0,0" VerticalAlignment="Top" Width="157"/>
+        <TextBox x:Name="searchBox" HorizontalAlignment="Left" Height="18" Margin="20,-10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="275" TouchEnter="searchBox_TouchEnter" MouseEnter="searchBox_MouseEnter" SpellCheck.IsEnabled="True" Language="en-US"/>
+        <Image x:Name="magGlass" HorizontalAlignment="Left" Height="18" Margin="305,-19,0,0" VerticalAlignment="Top" Width="20" Source="/images/magGlass.png"/>
+
+    </StackPanel>
 </UserControl>
