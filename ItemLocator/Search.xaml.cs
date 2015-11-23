@@ -20,6 +20,7 @@ namespace ItemLocator
     /// </summary>
     public partial class Search : UserControl
     {
+        public Items[] itemsList;
         public Search()
         {
             InitializeComponent();
@@ -39,7 +40,7 @@ namespace ItemLocator
         {
             String keywords = searchBox.Text;
 
-            List<Product> result = doSearch(keywords);
+            List<Items> result = doSearch(keywords);
 
             Results newResult = new Results(result, keywords);
 
@@ -53,26 +54,17 @@ namespace ItemLocator
 
         }
 
-        private List<Product> doSearch(String keywords)
+        private List<Items> doSearch(String keywords)
         {
-            List<Product> searchList = new List<Product>();
-            List<Product> productList = new List<Product>();
+            List<Items> searchList = new List<Items>();
 
-            Product aProduct = new Product("eggs");
-            productList.Add(aProduct);
-
-            Product aProduct1 = new Product("egg nog");
-            productList.Add(aProduct1);
-
-            Product[] productArray = productList.ToArray();
-
-            int size = productArray.Length;
+            int size = itemsList.Length;
 
             for(int i=0; i < size; i++)
             {
-                if (productList[i].name.Contains(keywords))
+                if (itemsList[i].name.ToLower().Contains(keywords.ToLower()))
                 {
-                    searchList.Add(productList[i]);
+                    searchList.Add(itemsList[i]);
                 }
             }
 

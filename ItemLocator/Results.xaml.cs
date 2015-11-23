@@ -26,7 +26,7 @@ namespace ItemLocator
             InitializeComponent();
         }
 
-        public Results(List<Product> result, String searchWord)
+        public Results(List<Items> result, String searchWord)
         {
             InitializeComponent();
 
