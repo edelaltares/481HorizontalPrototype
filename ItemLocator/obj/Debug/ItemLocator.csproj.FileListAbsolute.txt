@@ -18,7 +18,6 @@ C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\CPSC481\ItemLocator\ItemL
 C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\bin\Debug\ItemLocator.exe.config
 C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\ItemLocator.exe
 C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\ItemLocator.pdb
-C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\ItemLocator.csprojResolveAssemblyReference.cache
 C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\MainWindow.g.cs
 C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\Menu.g.cs
 C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\Search.g.cs
@@ -63,3 +62,7 @@ H:\University\CPSC481\ItemLocator\obj\Debug\ItemLocator.exe
 H:\University\CPSC481\ItemLocator\obj\Debug\ItemLocator.pdb
 H:\University\CPSC481\ItemLocator\obj\Debug\Results_Map.g.cs
 H:\University\CPSC481\ItemLocator\obj\Debug\Results_Map.baml
+C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\Results.g.cs
+C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\Results_Map.g.cs
+C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\Results.baml
+C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\Results_Map.baml
