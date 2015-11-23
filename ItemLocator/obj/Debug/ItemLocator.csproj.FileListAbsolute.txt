@@ -19,7 +19,6 @@ C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\
 C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\ItemLocator.exe
 C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\ItemLocator.pdb
 C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\MainWindow.g.cs
-C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\Menu.g.cs
 C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\Search.g.cs
 C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\App.g.cs
 C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\ItemLocator_MarkupCompile.cache
@@ -27,7 +26,6 @@ C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\
 C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\bin\Debug\ItemLocator.exe
 C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\bin\Debug\ItemLocator.pdb
 C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\MainWindow.baml
-C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\Menu.baml
 C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\Search.baml
 C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\ItemLocator.g.resources
 C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\ItemLocator.Properties.Resources.resources

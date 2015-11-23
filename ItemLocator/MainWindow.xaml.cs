@@ -29,6 +29,11 @@ namespace ItemLocator
         {
             InitializeComponent();
             stack1.Children.Add(search);
+
+            Navigation.ContentContainer = stack1;
+            Navigation.BackButton = backButton;
+
+            // Items
             itemsList = new Items[42];
             Items apple = new Items("Apple", "Produce", true, 0.99, 0, 1, 1, 1, 1);
             itemsList[0] = apple;
@@ -124,41 +129,70 @@ namespace ItemLocator
 
         public void newPage(UserControl nextPage)
         {
-            stack1.Children.Clear();
-            stack1.Children.Add(nextPage);
+            Navigation.NavigateTo(nextPage);
         }
 
         private void ShowMenu(object sender, RoutedEventArgs e)
         {
-            if (!menu.IsVisible)
+            if (!menuRect.IsVisible)
             {
-                menu.Visibility = Visibility.Visible;
+                menuRect.Visibility = Visibility.Visible;
+                homeButton.Visibility = Visibility.Visible;
+                mapButton.Visibility = Visibility.Visible;
+                salesButton.Visibility = Visibility.Visible;
             }
             else
             {
-                menu.Visibility = Visibility.Collapsed;
+                menuRect.Visibility = Visibility.Collapsed;
+                homeButton.Visibility = Visibility.Collapsed;
+                mapButton.Visibility = Visibility.Collapsed;
+                salesButton.Visibility = Visibility.Collapsed;
             }
         }
         
         private void HomeButtonClick(object sender, RoutedEventArgs e)
         {
-            stack1.Children.Clear();
-            stack1.Children.Add(search);
-            menu.Visibility = Visibility.Collapsed;
+            menuRect.Visibility = Visibility.Collapsed;
+            homeButton.Visibility = Visibility.Collapsed;
+            mapButton.Visibility = Visibility.Collapsed;
+            salesButton.Visibility = Visibility.Collapsed;
+            
+            if (!backButton.IsVisible)
+            {
+                backButton.Visibility = Visibility.Visible;
+            }
+
+            Navigation.NavigateTo(search);
         }
 
         private void MapButtonClick(object sender, RoutedEventArgs e)
         {
-            stack1.Children.Clear();
-            stack1.Children.Add(map);
-            menu.Visibility = Visibility.Collapsed;
+            menuRect.Visibility = Visibility.Collapsed;
+            homeButton.Visibility = Visibility.Collapsed;
+            mapButton.Visibility = Visibility.Collapsed;
+            salesButton.Visibility = Visibility.Collapsed;
+
+            Navigation.NavigateTo(map);
+
+            if (!backButton.IsVisible)
+            {
+                backButton.Visibility = Visibility.Visible;
+            }
         }
 
         private void SalesButtonClick(object sender, RoutedEventArgs e)
         {
-            stack1.Children.Clear();
-            stack1.Children.Add(sales);
-            menu.Visibility = Visibility.Collapsed;
+            menuRect.Visibility = Visibility.Collapsed;
+            homeButton.Visibility = Visibility.Collapsed;
+            mapButton.Visibility = Visibility.Collapsed;
+            salesButton.Visibility = Visibility.Collapsed;
+
+            Navigation.NavigateTo(sales);
+
+            if (!backButton.IsVisible)
+            {
+                backButton.Visibility = Visibility.Visible;
+            }
         }
     }
 }
