@@ -8,19 +8,71 @@ namespace ItemLocator
 {
     public class Items
     {
-        public String name;
-        public String location;
-        public Boolean inStock;
-        public double price;
-        public double salePrice;
-        public int xMiniLoc;
-        public int yMiniLoc;
-        public int xLargeLoc;
-        public int yLargeLoc;
+        public String name
+        {
+            get;
+            set;
+        }
+
+        public String location
+        {
+            get;
+            set;
+        }
+
+        public String imagelocation
+        {
+            get;
+            set;
+        }
+
+        public Boolean inStock
+        {
+            get;
+            set;
+        }
+
+        public double price
+        {
+            get;
+            set;
+        }
+
+        public double salePrice
+        {
+            get;
+            set;
+        }
+
+        public int xMiniLoc
+        {
+            get;
+            set;
+        }
+
+        public int yMiniLoc
+        {
+            get;
+            set;
+        }
+
+        public int xLargeLoc
+        {
+            get;
+            set;
+        }
+
+        public int yLargeLoc
+        {
+            get;
+            set;
+        }
+
 
         public Items(String newName, String newLoc, Boolean stock, double newPrice, double newSalePrice, int smallX, int smallY, int largeX, int largeY)
         {
             name = newName;
+            imagelocation = "images/Products/" + newName.ToLower().Replace(' ','-') + ".png";
             location = newLoc;
             inStock = stock;
             price = newPrice;
@@ -40,5 +92,7 @@ namespace ItemLocator
         {
             return (salePrice != 0);
         }
+
+
     }
 }

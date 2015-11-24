@@ -34,7 +34,7 @@ namespace ItemLocator
             Navigation.BackButton = backButton;
 
             // Items
-            itemsList = new Items[42];
+            itemsList = new Items[43];
             Items apple = new Items("Apple", "Produce", true, 0.99, 0, 1, 1, 1, 1);
             itemsList[0] = apple;
             Items banana = new Items("Banana", "Produce", true, 0.99, 0, 1, 1, 1, 1);
@@ -119,6 +119,9 @@ namespace ItemLocator
             itemsList[40] = gouda;
             Items swissSlices = new Items("Swiss Slices", "Deli", true, 5.99, 0, 1, 1, 1, 1);
             itemsList[41] = swissSlices;
+            Items meringuePowder = new Items("Meringue Powder", "Aisle 1", true, 5.99, 0, 1, 1, 1, 1);
+            itemsList[42] = meringuePowder;
+
             search.itemsList = itemsList;
         }
 

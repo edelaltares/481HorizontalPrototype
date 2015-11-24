@@ -90,3 +90,5 @@ C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\
 \\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master(1)\CPSC481-master\ItemLocator\obj\Debug\ItemLocator.csproj.GenerateResource.Cache
 \\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master(1)\CPSC481-master\ItemLocator\obj\Debug\ItemLocator.exe
 \\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master(1)\CPSC481-master\ItemLocator\obj\Debug\ItemLocator.pdb
+C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\App.baml
+C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\ItemLocator_Content.g.cs
