@@ -140,6 +140,10 @@ namespace ItemLocator
                 homeButton.Visibility = Visibility.Visible;
                 mapButton.Visibility = Visibility.Visible;
                 salesButton.Visibility = Visibility.Visible;
+
+                searchImage.Visibility = Visibility.Visible;
+                mapImage.Visibility = Visibility.Visible;
+                salesImage.Visibility = Visibility.Visible;
             }
             else
             {
@@ -147,15 +151,16 @@ namespace ItemLocator
                 homeButton.Visibility = Visibility.Collapsed;
                 mapButton.Visibility = Visibility.Collapsed;
                 salesButton.Visibility = Visibility.Collapsed;
+
+                searchImage.Visibility = Visibility.Collapsed;
+                mapImage.Visibility = Visibility.Collapsed;
+                salesImage.Visibility = Visibility.Collapsed;
             }
         }
         
         private void HomeButtonClick(object sender, RoutedEventArgs e)
         {
-            menuRect.Visibility = Visibility.Collapsed;
-            homeButton.Visibility = Visibility.Collapsed;
-            mapButton.Visibility = Visibility.Collapsed;
-            salesButton.Visibility = Visibility.Collapsed;
+            ShowMenu(sender, e);
             
             if (!backButton.IsVisible)
             {
@@ -167,10 +172,7 @@ namespace ItemLocator
 
         private void MapButtonClick(object sender, RoutedEventArgs e)
         {
-            menuRect.Visibility = Visibility.Collapsed;
-            homeButton.Visibility = Visibility.Collapsed;
-            mapButton.Visibility = Visibility.Collapsed;
-            salesButton.Visibility = Visibility.Collapsed;
+            ShowMenu(sender, e);
 
             Navigation.NavigateTo(map);
 
@@ -182,10 +184,7 @@ namespace ItemLocator
 
         private void SalesButtonClick(object sender, RoutedEventArgs e)
         {
-            menuRect.Visibility = Visibility.Collapsed;
-            homeButton.Visibility = Visibility.Collapsed;
-            mapButton.Visibility = Visibility.Collapsed;
-            salesButton.Visibility = Visibility.Collapsed;
+            ShowMenu(sender, e);
 
             Navigation.NavigateTo(sales);
 
