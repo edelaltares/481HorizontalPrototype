@@ -70,5 +70,19 @@ namespace ItemLocator
 
             return searchList;
         }
+
+        private void showClear(object sender, TextChangedEventArgs e)
+        {
+            if (!clearButton.IsVisible && searchBox.Text.Length != 0)
+            {
+                clearButton.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void clearSearch(object sender, RoutedEventArgs e)
+        {
+            searchBox.Text = "";
+            clearButton.Visibility = Visibility.Collapsed;
+        }
     }
 }

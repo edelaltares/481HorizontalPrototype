@@ -40,6 +40,11 @@ namespace ItemLocator
                 resultSearch.Text = searchWord;
                 return;
             }
+            
+            if(searchWord.Length != 0)
+            {
+                clearButton.Visibility = Visibility.Visible;
+            }
 
             if (result.Count() > 10)
             {
@@ -115,6 +120,20 @@ namespace ItemLocator
             resultList = resultList.OrderBy(Items => Items.price).Reverse().ToList();
 
             resultsListBox.ItemsSource = resultList;
+        }
+
+        private void showClear(object sender, TextChangedEventArgs e)
+        {
+            if (!clearButton.IsVisible && resultSearch.Text.Length != 0)
+            {
+                clearButton.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void clearSearch(object sender, RoutedEventArgs e)
+        {
+            resultSearch.Text = "";
+            clearButton.Visibility = Visibility.Collapsed;
         }
     }
 }

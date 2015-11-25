@@ -148,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\Products\meringue_powder.png" />
+    <Resource Include="images\x.png" />
     <Resource Include="images\Products\unknown.png" />
   </ItemGroup>
   <ItemGroup>
