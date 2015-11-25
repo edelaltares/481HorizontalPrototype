@@ -32,10 +32,18 @@ namespace ItemLocator
             InitializeComponent();
             
             resultList = result;
+            
+            if(searchWord.Length < 3)
+            {
+                dialogMessage.Text = "Your search is too short.\nPlease enter a search with more than three letters.";
+                keywordLabel.Content = searchWord;
+                resultSearch.Text = searchWord;
+                return;
+            }
 
             if (result.Count() > 10)
             {
-                dialogMessage.Content = "Your search returned more than 10 \nresults. You may wish to make your \nsearch more specific to return less.";
+                dialogMessage.Text = "Your search returned more than 10 results.\n\nYou may wish to make your search more specific to return less.";
                 resultsListBox.ItemsSource = result;
                 keywordLabel.Content = searchWord;
                 resultSearch.Text = searchWord;
@@ -48,7 +56,7 @@ namespace ItemLocator
             }
             else
             {
-                dialogMessage.Content = "Your search returned 0 results. The\nproduct you're looking for may not be \nsold here or you may have made a \nspelling mistake.";
+                dialogMessage.Text = "Your search returned 0 results.\n\nThe product you're looking for may:\n   - Not be sold here, or\n   - You may have made a spelling mistake.";
             }
         }
 
@@ -59,7 +67,7 @@ namespace ItemLocator
 
         private void itemClick(object sender, RoutedEventArgs e)
         {
-            MainWindow main = (MainWindow)Window.GetWindow(this);
+            MainWindow main = (MainWindow) Window.GetWindow(this);
             
             Results_Map itemMap = new Results_Map((Items) resultsListBox.SelectedItem);
 

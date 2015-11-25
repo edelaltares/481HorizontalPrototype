@@ -35,10 +35,10 @@
         </ComboBox>
         
         <!-- DIALOG MESSAGE -->
-        <Label x:Name="dialogMessage" Grid.Row="3" Content="" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Top" Padding="0"  FontSize="18.667" Foreground="#FFEE2D24" />
+        <TextBlock x:Name="dialogMessage" Grid.Row="3" Text="" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Top" Padding="0"  FontSize="15" Foreground="#FFEE2D24" />
 
         <!-- LIST OF RESULTS -->
-        <ScrollViewer Grid.Row="4" VerticalScrollBarVisibility="Auto" Height="{Binding Path=ActualHeight,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=RowDefinition}}">
+        <ScrollViewer Grid.Row="4" VerticalScrollBarVisibility="Auto">
             <ListBox Control.MouseDoubleClick="itemClick" Name="resultsListBox" Canvas.Left="0" Canvas.Top="40" HorizontalContentAlignment="Stretch" BorderBrush="{x:Null}" Height="Auto">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
