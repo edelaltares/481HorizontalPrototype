@@ -5,14 +5,20 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ItemLocator"
              mc:Ignorable="d" 
-             d:DesignHeight="525" d:DesignWidth="350">
-    <Grid>
-        <Grid x:Name="ItemGrid" Margin="10,10,10,406" Background="#FFE2E2E2">
-            <Image x:Name="Product_IMG" HorizontalAlignment="Left" Height="89" Margin="10,10,0,0" VerticalAlignment="Top" Width="89" Source=""/>
-            <TextBlock x:Name="Product_Name" HorizontalAlignment="Left" Height="22" Margin="114,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="143" FontWeight="Bold" FontSize="14.667"/>
-            <TextBlock x:Name="Product_Price" HorizontalAlignment="Left" Height="17" Margin="114,37,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="74" FontSize="13.333"/>
-            <TextBlock x:Name="Product_Stock" HorizontalAlignment="Left" Height="19" Margin="114,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="66" FontSize="13.333"/>
-            <TextBlock x:Name="AisleNum" HorizontalAlignment="Left" Height="42" Margin="260,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="57" TextAlignment="Center" FontSize="32" FontWeight="Bold"/>
+             d:DesignHeight="520" d:DesignWidth="340">
+    <Grid Width="340">
+        <Grid x:Name="ItemGrid" Margin="10,10,10,0" Background="#FFE2E2E2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            
+            <Image Grid.Column="0" x:Name="Product_IMG" HorizontalAlignment="Left" Height="89" Margin="10,10,0,0" VerticalAlignment="Top" />
+            <TextBlock Grid.Column="1" x:Name="Product_Name" HorizontalAlignment="Left" Height="22" Margin="114,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontWeight="Bold" FontSize="14.667"/>
+            <TextBlock Grid.Column="1" x:Name="Product_Price" HorizontalAlignment="Left" Height="17" Margin="114,37,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="13.333"/>
+            <TextBlock Grid.Column="1" x:Name="Product_Stock" HorizontalAlignment="Left" Height="19" Margin="114,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="13.333"/>
+            <TextBlock Grid.Column="2" x:Name="AisleNum" HorizontalAlignment="Left" Height="42" Margin="260,50,0,0" TextWrapping="Wrap" Text="Yo" VerticalAlignment="Top" TextAlignment="Center" FontSize="20" FontWeight="Bold"/>
         </Grid>
         <Grid x:Name="MapGrid" Margin="10,160,10,65">
             <Image x:Name="MiniMap" HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="330" Source="images/Store/aisle.png"/>

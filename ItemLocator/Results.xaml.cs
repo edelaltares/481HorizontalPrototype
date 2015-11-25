@@ -30,7 +30,7 @@ namespace ItemLocator
         public Results(List<Items> result, String searchWord)
         {
             InitializeComponent();
-
+            
             resultList = result;
 
             if (result.Count() > 10)

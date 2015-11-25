@@ -54,7 +54,7 @@
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
                             <Border Margin="2">
-                                <Image Source="{Binding Path=images/Product/meringue-powder.png}" Stretch="Fill" />
+                                <Image Source="{Binding Path=imagelocation}" Stretch="Fill" />
                             </Border>
                             <StackPanel Grid.Column="1" Margin="2">
                                 <StackPanel Orientation="Horizontal" TextBlock.FontWeight="Bold" >
