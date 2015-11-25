@@ -5,31 +5,41 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ItemLocator"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="350">
+             d:DesignHeight="510" d:DesignWidth="350">
 
-    <Grid Background="White">
+    <Grid Background="White" Height="510">
         <Grid.RowDefinitions>
-            <RowDefinition Height="30" />
-            <RowDefinition Height="30" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <!-- LABEL -->
-        <Label x:Name="resultsLabel" Grid.Row="0" Content="Sales" HorizontalAlignment="Left" Margin="5,0,0,0" Width="160" VerticalAlignment="Top" Padding="0" FontSize="18.667" />
-        <Label x:Name="keywordLabel" Grid.Row="0" Content="" HorizontalAlignment="Left" Margin="155,0,0,0" VerticalAlignment="Top" Padding="0"  FontSize="18.667" Foreground="#FFEE2D24" />
+        <Label x:Name="salesLabel" Grid.Row="0" Content="Sales" HorizontalAlignment="Left" Margin="10,10,0,0" Width="160" VerticalAlignment="Center" Padding="0" FontSize="20" Grid.ColumnSpan="2" />
 
         <!-- SEARCH -->
-        <TextBox x:Name="resultSearch" Grid.Row="1" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="25" Margin="10,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="240" TouchEnter="searchBox_TouchEnter" MouseEnter="searchBox_MouseEnter" SpellCheck.IsEnabled="True" Language="en-US"/>
-        <Image x:Name="magGlass" Grid.Row="1" HorizontalAlignment="Left" Height="18" Margin="260,5,0,0" VerticalAlignment="Top" Width="20" Source="/images/magGlass.png" Panel.ZIndex="100" />
-        <Button x:Name="searchButton" Grid.Row="1" Content="Search" Width="70" Height="25" Margin="250,0,0,0" Padding="15,0,0,0" FontSize="14" BorderThickness="0" Click="newSearch" />
+        <Label x:Name="searchLabel" Grid.Row="1" Content="Search within sales:" HorizontalAlignment="Left" Margin="10,5,0,0" Width="160" VerticalAlignment="Top" Padding="0" FontSize="15" Grid.ColumnSpan="2" />
+        <TextBox x:Name="salesSearch" Grid.Row="1" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="26" Margin="10,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="240" TouchEnter="searchBox_TouchEnter" MouseEnter="searchBox_MouseEnter" SpellCheck.IsEnabled="True" Language="en-US" Grid.ColumnSpan="2"/>
+        <Image x:Name="magGlass" Grid.Row="1" HorizontalAlignment="Left" Height="18" Margin="257,35,0,0" VerticalAlignment="Top" Width="20" Source="/images/magGlass.png" Panel.ZIndex="100" Grid.Column="1" />
+        <Button x:Name="searchButton" Grid.Row="1" Content="Search" Width="70" Height="25" Margin="252,30,15,0" Padding="15,0,0,0" FontSize="14" BorderThickness="0" Click="newSearch" Grid.Column="1" />
+
+        <!-- FILTERS -->
+        <Label x:Name="sortLabel" Grid.Row="2" Content="Sort by:" Margin="0,0,0,0" Grid.ColumnSpan="2" />
+        <ComboBox x:Name="sortOptions" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="50,3,0,0" Grid.ColumnSpan="2">
+            <ComboBoxItem Content="Name (A to Z)" Selected="sortNameA" />
+            <ComboBoxItem Content="Name (Z to A)" Selected="sortNameZ" />
+            <ComboBoxItem Content="Price (Low to High)" Selected="sortPriceLow" />
+            <ComboBoxItem Content="Price (High to Low)" Selected="sortPriceHigh" />
+        </ComboBox>
 
         <!-- DIALOG MESSAGE -->
-        <Label x:Name="dialogMessage" Grid.Row="2" Content="" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Top" Padding="0"  FontSize="18.667" Foreground="#FFEE2D24" />
+        <Label x:Name="dialogMessage" Grid.Row="3" Content="" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Top" Padding="0"  FontSize="18.667" Foreground="#FFEE2D24" />
 
         <!-- LIST OF RESULTS -->
-        <ScrollViewer Grid.Row="3" Height="Auto">
-            <ListBox Control.MouseDoubleClick="itemClick" Name="salesListBox" Canvas.Left="0" Canvas.Top="40" HorizontalContentAlignment="Stretch" BorderBrush="{x:Null}" Height="Auto">
+        <ScrollViewer Grid.Row="4" Height="{Binding Path=ActualHeight,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=RowDefinition}}" VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" Margin="0,-15,0,0">
+            <ListBox Name="salesListBox" Canvas.Left="0" Margin="0,0,0,0" HorizontalContentAlignment="Stretch" BorderBrush="{x:Null}">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
                         <VirtualizingStackPanel Orientation="Vertical"/>
@@ -44,14 +54,15 @@
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
                             <Border Margin="2">
-                                <Image Grid.Column="0" Source="{Binding Path=imagelocation, FallbackValue=images/Products/unknown.png}" Stretch="Fill" Width="50" Height="50" />
+                                <Image Source="{Binding Path=images/Product/meringue-powder.png}" Stretch="Fill" />
                             </Border>
                             <StackPanel Grid.Column="1" Margin="2">
                                 <StackPanel Orientation="Horizontal" TextBlock.FontWeight="Bold" >
                                     <TextBlock Text="{Binding Path=name, FallbackValue=Item Name}" Foreground="Black" />
                                 </StackPanel>
-                                <TextBlock Text="{Binding Path=price, FallbackValue=$9.99}" Foreground="Black" />
-                                <TextBlock Text="{Binding Path=inStock, FallbackValue=In Stock}" Foreground="Black" />
+                                <TextBlock TextDecorations="Strikethrough" Text="{Binding Path=price, FallbackValue=$5.99}" Foreground="Red" />
+                                <TextBlock Text="{Binding Path=salePrice, FallbackValue=$9.99}" Foreground="Black" />
+                                <TextBlock Text="{Binding Path=availability, FallbackValue=In Stock}" Foreground="Black" />
                             </StackPanel>
                             <StackPanel Grid.Column="2" Margin="2">
                                 <TextBlock TextWrapping="Wrap" Text="{Binding Path=location, FallbackValue=10}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Foreground="Black" />

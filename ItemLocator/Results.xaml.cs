@@ -20,6 +20,7 @@ namespace ItemLocator
     /// </summary>
     public partial class Results : UserControl
     {
+        List<Items> resultList;
 
         public Results()
         {
@@ -29,6 +30,8 @@ namespace ItemLocator
         public Results(List<Items> result, String searchWord)
         {
             InitializeComponent();
+
+            resultList = result;
 
             if (result.Count() > 10)
             {
@@ -72,6 +75,34 @@ namespace ItemLocator
         private void searchBox_TouchEnter(object sender, TouchEventArgs e)
         {
 
+        }
+
+        private void sortNameA(object sender, RoutedEventArgs e)
+        {
+            resultList = resultList.OrderBy(Items => Items.name).ToList();
+
+            resultsListBox.ItemsSource = resultList;
+        }
+
+        private void sortNameZ(object sender, RoutedEventArgs e)
+        {
+            resultList = resultList.OrderBy(Items => Items.name).Reverse().ToList();
+
+            resultsListBox.ItemsSource = resultList;
+        }
+
+        private void sortPriceLow(object sender, RoutedEventArgs e)
+        {
+            resultList = resultList.OrderBy(Items => Items.price).ToList();
+
+            resultsListBox.ItemsSource = resultList;
+        }
+
+        private void sortPriceHigh(object sender, RoutedEventArgs e)
+        {
+            resultList = resultList.OrderBy(Items => Items.price).Reverse().ToList();
+
+            resultsListBox.ItemsSource = resultList;
         }
     }
 }

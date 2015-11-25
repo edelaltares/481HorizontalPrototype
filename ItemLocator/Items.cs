@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.ObjectModel;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace ItemLocator
 {
@@ -72,7 +75,7 @@ namespace ItemLocator
         public Items(String newName, String newLoc, Boolean stock, double newPrice, double newSalePrice, int smallX, int smallY, int largeX, int largeY)
         {
             name = newName;
-            imagelocation = "images/Products/" + newName.ToLower().Replace(' ','-') + ".png";
+            imagelocation = "/images/Products/" + newName.ToLower().Replace(' ', '_') + ".png";
             location = newLoc;
             inStock = stock;
             price = newPrice;
@@ -92,7 +95,5 @@ namespace ItemLocator
         {
             return (salePrice != 0);
         }
-
-
     }
 }

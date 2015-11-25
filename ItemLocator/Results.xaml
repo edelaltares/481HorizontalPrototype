@@ -5,14 +5,15 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ItemLocator"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="350">
+             d:DesignHeight="510" d:DesignWidth="350">
 
-    <Grid Background="White">
+    <Grid Background="White" Height="510">
         <Grid.RowDefinitions>
-            <RowDefinition Height="30" />
-            <RowDefinition Height="30" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <!-- LABEL -->
@@ -21,14 +22,23 @@
 
         <!-- SEARCH -->
         <TextBox x:Name="resultSearch" Grid.Row="1" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="25" Margin="10,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="240" TouchEnter="searchBox_TouchEnter" MouseEnter="searchBox_MouseEnter" SpellCheck.IsEnabled="True" Language="en-US"/>
-        <Image x:Name="magGlass" Grid.Row="1" HorizontalAlignment="Left" Height="18" Margin="260,5,0,0" VerticalAlignment="Top" Width="20" Source="/images/magGlass.png" Panel.ZIndex="100" />
-        <Button x:Name="searchButton" Grid.Row="1" Content="Search" Width="70" Height="25" Margin="250,0,0,0" Padding="15,0,0,0" FontSize="14" BorderThickness="0" Click="newSearch" />
+        <Image x:Name="magGlass" Grid.Row="1" HorizontalAlignment="Left" Height="18" Margin="255,5,0,0" VerticalAlignment="Top" Width="20" Source="/images/magGlass.png" Panel.ZIndex="100" />
+        <Button x:Name="searchButton" Grid.Row="1" Content="Search" Width="70" Height="25" Margin="243,0,0,0" Padding="15,0,0,0" FontSize="14" BorderThickness="0" Click="newSearch" />
 
+        <!-- FILTERS -->
+        <Label x:Name="sortLabel" Grid.Row="2" Content="Sort by:" Margin="0,0,0,0" Grid.ColumnSpan="2" />
+        <ComboBox x:Name="sortOptions" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="50,3,0,0" Grid.ColumnSpan="2">
+            <ComboBoxItem Content="Name (A to Z)" Selected="sortNameA" />
+            <ComboBoxItem Content="Name (Z to A)" Selected="sortNameZ" />
+            <ComboBoxItem Content="Price (Low to High)" Selected="sortPriceLow" />
+            <ComboBoxItem Content="Price (High to Low)" Selected="sortPriceHigh" />
+        </ComboBox>
+        
         <!-- DIALOG MESSAGE -->
         <Label x:Name="dialogMessage" Grid.Row="2" Content="" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Top" Padding="0"  FontSize="18.667" Foreground="#FFEE2D24" />
 
         <!-- LIST OF RESULTS -->
-        <ScrollViewer Grid.Row="3" Height="Auto">
+        <ScrollViewer Grid.Row="3" VerticalScrollBarVisibility="Auto" Height="{Binding Path=ActualHeight,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=RowDefinition}}">
             <ListBox Control.MouseDoubleClick="itemClick" Name="resultsListBox" Canvas.Left="0" Canvas.Top="40" HorizontalContentAlignment="Stretch" BorderBrush="{x:Null}" Height="Auto">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -43,9 +53,7 @@
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
-                            <Border Margin="2">
-                                <Image Grid.Column="0" Source="{Binding Path=imagelocation, FallbackValue=images/Products/unknown.png}" Stretch="Fill" Width="50" Height="50" />
-                            </Border>
+                            <Image Grid.Column="0" Source="{Binding Path=imagelocation, FallbackValue=images/Products/unknown.png}" Stretch="Fill" />
                             <StackPanel Grid.Column="1" Margin="2">
                                 <StackPanel Orientation="Horizontal" TextBlock.FontWeight="Bold" >
                                     <TextBlock Text="{Binding Path=name, FallbackValue=Item Name}" Foreground="Black" />

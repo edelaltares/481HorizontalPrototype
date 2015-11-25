@@ -21,7 +21,7 @@ namespace ItemLocator
     public partial class MainWindow : Window
     {
         private Map map = new Map();
-        private Sales sales = new Sales();
+        private Sales sales;
         private Items[] itemsList;
         private Search search = new Search();
 
@@ -122,6 +122,7 @@ namespace ItemLocator
             Items meringuePowder = new Items("Meringue Powder", "Aisle 1", true, 5.99, 0, 1, 1, 1, 1);
             itemsList[42] = meringuePowder;
 
+            sales = new Sales(itemsList);
             search.itemsList = itemsList;
         }
 
@@ -188,13 +189,20 @@ namespace ItemLocator
         private void SalesButtonClick(object sender, RoutedEventArgs e)
         {
             ShowMenu(sender, e);
-
+            
             Navigation.NavigateTo(sales);
 
             if (!backButton.IsVisible)
             {
                 backButton.Visibility = Visibility.Visible;
             }
+
+            sales.salesListBox.ItemsSource = sales.findSales();
+        }
+
+        public Items[] getItems()
+        {
+            return itemsList;
         }
     }
 }
