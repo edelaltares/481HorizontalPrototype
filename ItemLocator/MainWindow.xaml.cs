@@ -133,6 +133,11 @@ namespace ItemLocator
 
         public void newPage(UserControl nextPage)
         {
+            if (!backButton.IsVisible)
+            {
+                backButton.Visibility = Visibility.Visible;
+            }
+
             Navigation.NavigateTo(nextPage);
         }
 

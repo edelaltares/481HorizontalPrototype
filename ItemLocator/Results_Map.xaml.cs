@@ -20,9 +20,81 @@ namespace ItemLocator
     /// </summary>
     public partial class Results_Map : UserControl
     {
-        public Results_Map()
+        public String name
+        {
+            get;
+            set;
+        }
+
+        public String location
+        {
+            get;
+            set;
+        }
+
+        public String imagelocation
+        {
+            get;
+            set;
+        }
+
+        public Boolean inStock
+        {
+            get;
+            set;
+        }
+
+        public double price
+        {
+            get;
+            set;
+        }
+
+        public double salePrice
+        {
+            get;
+            set;
+        }
+
+        public int xMiniLoc
+        {
+            get;
+            set;
+        }
+
+        public int yMiniLoc
+        {
+            get;
+            set;
+        }
+
+        public int xLargeLoc
+        {
+            get;
+            set;
+        }
+
+        public int yLargeLoc
+        {
+            get;
+            set;
+        }
+        
+        public Results_Map(Items product)
         {
             InitializeComponent();
+
+            Product_Name.Text = product.name;
+            AisleNum.Text = product.location;
+           
+            Product_IMG.Source = product.imagelocation;
+
+            Product_Stock.Text = product.inStock.ToString();
+            Product_Price.Text = product.price.ToString();
+            xMiniLoc = product.xMiniLoc;
+            yMiniLoc = product.yMiniLoc;
+            xLargeLoc = product.xLargeLoc;
+            yLargeLoc = product.yLargeLoc;
         }
     }
 }

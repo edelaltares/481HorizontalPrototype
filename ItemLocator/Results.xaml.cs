@@ -59,7 +59,11 @@ namespace ItemLocator
 
         private void itemClick(object sender, RoutedEventArgs e)
         {
+            MainWindow main = (MainWindow)Window.GetWindow(this);
+            
+            Results_Map itemMap = new Results_Map((Items) resultsListBox.SelectedItem);
 
+            main.newPage(itemMap);
         }
 
         private void newSearch(object sender, RoutedEventArgs e)

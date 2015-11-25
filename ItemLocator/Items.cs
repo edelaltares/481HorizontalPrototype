@@ -23,7 +23,7 @@ namespace ItemLocator
             set;
         }
 
-        public String imagelocation
+        public ImageSource imagelocation
         {
             get;
             set;
@@ -75,7 +75,12 @@ namespace ItemLocator
         public Items(String newName, String newLoc, Boolean stock, double newPrice, double newSalePrice, int smallX, int smallY, int largeX, int largeY)
         {
             name = newName;
-            imagelocation = "/images/Products/" + newName.ToLower().Replace(' ', '_') + ".png";
+
+            String imgPath = "images/Products/" + newName.ToLower().Replace(' ', '_') + ".png";
+            Uri imgUri = new Uri(imgPath, UriKind.Relative);
+            BitmapImage imgBitmap = new BitmapImage(imgUri);
+            imagelocation = imgBitmap;
+
             location = newLoc;
             inStock = stock;
             price = newPrice;
