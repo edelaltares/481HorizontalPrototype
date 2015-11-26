@@ -6,21 +6,27 @@
              xmlns:local="clr-namespace:ItemLocator"
              mc:Ignorable="d" 
              d:DesignHeight="520" d:DesignWidth="340">
-    <Grid Width="340">
-        <Grid x:Name="ItemGrid" Margin="10,10,10,0" Background="#FFE2E2E2">
+    <Grid Width="330">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" x:Name="ItemGrid" Margin="0,0,0,0" Background="#FFE2E2E2">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="50" />
-                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="90" />
+                <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
-            
-            <Image Grid.Column="0" x:Name="Product_IMG" HorizontalAlignment="Left" Height="89" Margin="10,10,0,0" VerticalAlignment="Top" />
-            <TextBlock Grid.Column="1" x:Name="Product_Name" HorizontalAlignment="Left" Height="22" Margin="114,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontWeight="Bold" FontSize="14.667"/>
-            <TextBlock Grid.Column="1" x:Name="Product_Price" HorizontalAlignment="Left" Height="17" Margin="114,37,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="13.333"/>
-            <TextBlock Grid.Column="1" x:Name="Product_Stock" HorizontalAlignment="Left" Height="19" Margin="114,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="13.333"/>
-            <TextBlock Grid.Column="2" x:Name="AisleNum" HorizontalAlignment="Left" Height="42" Margin="260,50,0,0" TextWrapping="Wrap" Text="Yo" VerticalAlignment="Top" TextAlignment="Center" FontSize="20" FontWeight="Bold"/>
+
+            <Image Grid.Row="0" Grid.Column="0" x:Name="Product_IMG" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" />
+            <TextBlock Grid.Row="0" Grid.Column="1" x:Name="Product_Name" HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontWeight="Bold" FontSize="14.667"/>
+            <TextBlock Grid.Row="0" Grid.Column="1" x:Name="Product_Price" HorizontalAlignment="Left" Margin="0,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="13.333"/>
+            <TextBlock Grid.Row="0" Grid.Column="1" x:Name="Product_Stock" HorizontalAlignment="Left" Margin="0,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="13.333"/>
+            <TextBlock Grid.Row="0" Grid.Column="2" x:Name="AisleNum" HorizontalAlignment="Center" Margin="0,0,0,0" Padding="5,5,5,5"  TextWrapping="Wrap" Text="Yo" VerticalAlignment="Center" TextAlignment="Center" FontSize="25" FontWeight="Bold"/>
         </Grid>
-        <Grid x:Name="MapGrid" Margin="10,160,10,65">
+
+        <Grid Grid.Row="1" x:Name="MapGrid" Margin="0,0,0,0" VerticalAlignment="Center">
             <Image x:Name="MiniMap" HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="330" Source="images/Store/aisle.png"/>
             <Label x:Name="midAisle" Content="N/A" HorizontalAlignment="Left" Height="36" Margin="135,110,0,0" VerticalAlignment="Top" Width="60" FontSize="26.667" FontFamily="Arial Rounded MT Bold" Foreground="Black"/>
             <Label x:Name="bottomAisle" Content="N/A" HorizontalAlignment="Left" Height="36" Margin="135,195,0,0" VerticalAlignment="Top" Width="60" FontSize="26.667" FontFamily="Arial Rounded MT Bold" Foreground="Black"/>

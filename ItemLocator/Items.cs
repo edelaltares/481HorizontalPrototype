@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Controls;
 
 namespace ItemLocator
 {
@@ -18,12 +19,6 @@ namespace ItemLocator
         }
 
         public String location
-        {
-            get;
-            set;
-        }
-
-        public String imagelocation
         {
             get;
             set;
@@ -71,13 +66,7 @@ namespace ItemLocator
             set;
         }
 
-        public BitmapImage img
-        {
-            get;
-            set;
-        }
-
-        public BitmapImage defaultImg
+        public ImageSource imageLocation
         {
             get;
             set;
@@ -87,17 +76,15 @@ namespace ItemLocator
         public Items(String newName, String newLoc, Boolean stock, double newPrice, double newSalePrice, int smallX, int smallY, int largeX, int largeY)
         {
             name = newName;
-            /*
-            String imgPath = "images/Products/" + newName.ToLower().Replace(' ', '_') + ".png";
-            Uri imgUri = new Uri(imgPath, UriKind.Relative);
-            BitmapImage imgBitmap = new BitmapImage(imgUri); */
-            imagelocation = "images/Products/" + newName.ToLower().Replace(' ', '_') + ".png";
 
-            BitmapImage img = new BitmapImage(new Uri(imagelocation, UriKind.Relative));
-
-            String defaultimg = "images/Products/unknown.png";
-
-            BitmapImage defaultImg = new BitmapImage(new Uri(defaultimg, UriKind.Relative));
+            String imagelocation = "images/Products/" + newName.ToLower().Replace(' ', '_') + ".png";
+            Console.WriteLine(imagelocation);
+            Image prodImg = new Image();
+            BitmapImage bi = new BitmapImage();
+            bi.BeginInit();
+            bi.UriSource = new Uri(imagelocation, UriKind.Relative);
+            bi.EndInit();
+            imageLocation = bi;
 
             location = newLoc;
             inStock = stock;

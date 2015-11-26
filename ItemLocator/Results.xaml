@@ -52,13 +52,13 @@
                     <DataTemplate>
                         <Grid Background="#FFE2E2E2">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
 
-                            <Image Name="ProdImg" Source="{Binding Path=img}" Grid.Column="0" Stretch="Fill" />
                             <StackPanel Grid.Column="1" Margin="2">
+                                <Image Name="ProdImg" Source="{Binding Path=imageLocation}" Width="Auto" Height="Auto" />
                                 <StackPanel Orientation="Horizontal" TextBlock.FontWeight="Bold" >
                                     <TextBlock Text="{Binding Path=name, FallbackValue=Item Name}" Foreground="Black" />
                                 </StackPanel>

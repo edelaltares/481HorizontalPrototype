@@ -28,7 +28,9 @@ namespace ItemLocator
             AisleNum.Text = product.location;
             
             Product_Stock.Text = product.inStock.ToString();
-            Product_Price.Text = product.price.ToString();                                              
+            Product_Price.Text = product.price.ToString();
+
+            Product_IMG.Source = product.imageLocation;                                         
         }
     }
 }
