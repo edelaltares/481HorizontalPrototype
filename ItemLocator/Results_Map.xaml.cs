@@ -27,10 +27,21 @@ namespace ItemLocator
             Product_Name.Text = product.name;
             AisleNum.Text = product.location;
             
-            Product_Stock.Text = product.inStock.ToString();
-            Product_Price.Text = product.price.ToString();
+            Product_Stock.Text = product.getAvailability;
 
-            Product_IMG.Source = product.imageLocation;                                         
+            if (product.salePrice != 0)
+            {
+                Product_OldPrice.Text = product.oldPrice.ToString();
+                Product_SalePrice.Text = product.salePrice.ToString();
+            }
+            else
+            {
+                Product_Price.Text = product.price.ToString();
+            }
+
+            Product_IMG.Source = product.imageLocation;
+
+            theGrid.DataContext = product;
         }
     }
 }

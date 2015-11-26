@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:ItemLocator"
              mc:Ignorable="d" 
              d:DesignHeight="520" d:DesignWidth="340">
-    <Grid Width="330">
+    <Grid x:Name="theGrid" Width="330">
         <Grid.RowDefinitions>
             <RowDefinition Height="90" />
             <RowDefinition Height="*" />
@@ -19,9 +19,11 @@
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
 
-            <Image Grid.Row="0" Grid.Column="0" x:Name="Product_IMG" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" />
+            <Image Grid.Row="0" Grid.Column="0" x:Name="Product_IMG" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Source="{Binding Path=imageLocation}" />
             <TextBlock Grid.Row="0" Grid.Column="1" x:Name="Product_Name" HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontWeight="Bold" FontSize="14.667"/>
             <TextBlock Grid.Row="0" Grid.Column="1" x:Name="Product_Price" HorizontalAlignment="Left" Margin="0,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="13.333"/>
+            <TextBlock Grid.Row="0" Grid.Column="1" x:Name="Product_OldPrice" HorizontalAlignment="Left" Margin="0,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="13.333" Foreground="Red" TextDecorations="Strikethrough" />
+            <TextBlock Grid.Row="0" Grid.Column="1" x:Name="Product_SalePrice" HorizontalAlignment="Left" Margin="0,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="13.333"/>
             <TextBlock Grid.Row="0" Grid.Column="1" x:Name="Product_Stock" HorizontalAlignment="Left" Margin="0,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="13.333"/>
             <TextBlock Grid.Row="0" Grid.Column="2" x:Name="AisleNum" HorizontalAlignment="Center" Margin="0,0,0,0" Padding="5,5,5,5"  TextWrapping="Wrap" Text="Yo" VerticalAlignment="Center" TextAlignment="Center" FontSize="25" FontWeight="Bold"/>
         </Grid>

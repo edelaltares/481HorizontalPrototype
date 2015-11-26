@@ -29,8 +29,20 @@ namespace ItemLocator
             get;
             set;
         }
+        
+        public String getAvailability
+        {
+            get;
+            set;
+        }
 
         public double price
+        {
+            get;
+            set;
+        }
+
+        public double oldPrice
         {
             get;
             set;
@@ -87,8 +99,18 @@ namespace ItemLocator
             imageLocation = bi;
 
             location = newLoc;
-            inStock = stock;
-            price = newPrice;
+
+            if(stock)
+            {
+                getAvailability = "In Stock";
+            }
+            else
+            {
+                getAvailability = "Out of Stock";
+            }
+
+            price = newSalePrice;
+            oldPrice = newPrice;
             salePrice = newSalePrice;
             xMiniLoc = smallX;
             yMiniLoc = smallY;
