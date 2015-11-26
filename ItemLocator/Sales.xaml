@@ -62,7 +62,7 @@
                                 </StackPanel>
                                 <TextBlock TextDecorations="Strikethrough" Text="{Binding Path=price, FallbackValue=$5.99}" Foreground="Red" />
                                 <TextBlock Text="{Binding Path=salePrice, FallbackValue=$9.99}" Foreground="Black" />
-                                <TextBlock Text="{Binding Path=availability, FallbackValue=In Stock}" Foreground="Black" />
+                                <TextBlock Text="{Binding Path=getAvailability, FallbackValue=In Stock}" Foreground="Black" />
                             </StackPanel>
                             <StackPanel Grid.Column="2" Margin="2">
                                 <TextBlock TextWrapping="Wrap" Text="{Binding Path=location, FallbackValue=10}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Foreground="Black" />
