@@ -53,7 +53,7 @@ namespace ItemLocator
             itemsList[7] = kethcup;
             Items chickenSoup = new Items("Chicken Soup", "Aisle 4", true, 1.99, 0, 269, 141, 193, 274);
             itemsList[8] = chickenSoup;
-            Items goldFishCrackers = new Items("Gold Fish Crakcers", "Aisle 4", true, 4.99, 0, 88, 98, 111, 225);
+            Items goldFishCrackers = new Items("Gold Fish Crackers", "Aisle 4", true, 4.99, 0, 88, 98, 111, 225);
             itemsList[9] = goldFishCrackers;
             Items flour = new Items("Flour", "Aisle 5", true, 12.99, 0, 253, 141, 184, 237);
             itemsList[10] = flour;

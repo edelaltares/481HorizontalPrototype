@@ -33,9 +33,9 @@ namespace ItemLocator
             
             resultList = result;
             
-            if(searchWord.Length < 3)
+            if(searchWord.Length == 0)
             {
-                dialogMessage.Text = "Your search is too short.\nPlease enter a search with more than three letters.";
+                dialogMessage.Text = "You did not search for anything.\nPlease try again.";
                 keywordLabel.Content = searchWord;
                 resultSearch.Text = searchWord;
                 return;

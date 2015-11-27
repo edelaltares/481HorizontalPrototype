@@ -136,7 +136,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\map.png" />
+    <Resource Include="images\Products\map.png" />
     <Resource Include="images\sales.png" />
     <Resource Include="images\search.png" />
   </ItemGroup>
@@ -147,7 +147,26 @@
     <Resource Include="images\magGlass.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="images\Products\activia-yogurt.png" />
+    <Resource Include="images\Products\bread.png" />
+    <Resource Include="images\Products\canned-fruit.png" />
+    <Resource Include="images\Products\cheerios.png" />
+    <Resource Include="images\Products\chicken-soup.png" />
+    <Resource Include="images\Products\flour.png" />
+    <Resource Include="images\Products\gold-fish-crackers.png" />
+    <Resource Include="images\Products\ketchup.png" />
+    <Resource Include="images\Products\milk.png" />
+    <Resource Include="images\Products\muffins.png" />
+    <Resource Include="images\Products\orange-juice.png" />
+    <Resource Include="images\Products\tomato-sauce.png" />
+    <Resource Include="images\Products\vinegar.png" />
+    <Resource Include="images\Products\rice.png" />
+    <Resource Include="images\Products\salsa.png" />
     <Resource Include="images\Products\apple.png" />
+    <Resource Include="images\Products\banana.png" />
+    <Resource Include="images\Products\olive-oil.png" />
+    <Resource Include="images\Products\chicken-breast.png" />
+    <Resource Include="images\Products\frozen-shrimp.png" />
     <Content Include="images\Products\meringue-powder.png" />
     <Resource Include="images\x.png" />
     <Resource Include="images\Products\unknown.png" />
