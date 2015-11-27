@@ -58,8 +58,8 @@
                             </Grid.ColumnDefinitions>
 
                             <StackPanel Grid.Column="1" Margin="2">
-                                <Image Name="ProdImg" Source="{Binding Path=imageLocation}" Width="Auto" Height="Auto" />
-                                <StackPanel Orientation="Horizontal" TextBlock.FontWeight="Bold" >
+                                <Image Name="ProdImg" Width="Auto" Height="Auto" Source="{Binding Path=bi}" />
+                                    <StackPanel Orientation="Horizontal" TextBlock.FontWeight="Bold" >
                                     <TextBlock Text="{Binding Path=name, FallbackValue=Item Name}" Foreground="Black" />
                                 </StackPanel>
                                 <TextBlock Text="{Binding Path=price, FallbackValue=$9.99}" Foreground="Black" />

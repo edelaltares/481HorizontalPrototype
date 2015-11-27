@@ -84,6 +84,12 @@ namespace ItemLocator
             set;
         }
 
+        public BitmapImage bi
+        {
+            get;
+            set;
+        }
+
 
         public Items(String newName, String newLoc, Boolean stock, double newPrice, double newSalePrice, int smallX, int smallY, int largeX, int largeY)
         {
@@ -92,7 +98,7 @@ namespace ItemLocator
             String imagelocation = "images/Products/" + newName.ToLower().Replace(' ', '_') + ".png";
             Console.WriteLine(imagelocation);
             Image prodImg = new Image();
-            BitmapImage bi = new BitmapImage();
+            bi = new BitmapImage();
             bi.BeginInit();
             bi.UriSource = new Uri(imagelocation, UriKind.Relative);
             bi.EndInit();
@@ -109,7 +115,15 @@ namespace ItemLocator
                 getAvailability = "Out of Stock";
             }
 
-            price = newSalePrice;
+            if (newSalePrice != 0)
+            {
+                price = newSalePrice;
+            }
+            else
+            {
+                price = newPrice;
+            }
+
             oldPrice = newPrice;
             salePrice = newSalePrice;
             xMiniLoc = smallX;
