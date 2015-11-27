@@ -19,7 +19,7 @@
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
 
-            <Image Grid.Row="0" Grid.Column="0" x:Name="Product_IMG" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Source="{Binding Path=imageLocation}" />
+            <Image Grid.Row="0" Grid.Column="0" x:Name="Product_IMG" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" />
             <TextBlock Grid.Row="0" Grid.Column="1" x:Name="Product_Name" HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontWeight="Bold" FontSize="14.667"/>
             <TextBlock Grid.Row="0" Grid.Column="1" x:Name="Product_Price" HorizontalAlignment="Left" Margin="0,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="13.333"/>
             <TextBlock Grid.Row="0" Grid.Column="1" x:Name="Product_OldPrice" HorizontalAlignment="Left" Margin="0,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="13.333" Foreground="Red" TextDecorations="Strikethrough" />

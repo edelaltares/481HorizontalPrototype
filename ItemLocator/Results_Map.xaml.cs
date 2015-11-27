@@ -39,9 +39,8 @@ namespace ItemLocator
                 Product_Price.Text = product.price.ToString();
             }
 
-            Product_IMG.Source = product.imageLocation;
-
-            theGrid.DataContext = product;
+            Product_IMG.Source = product.bi;
+            
         }
     }
 }
