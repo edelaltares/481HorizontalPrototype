@@ -26,6 +26,8 @@ namespace ItemLocator
 
             Product_Name.Text = product.name;
             AisleNum.Text = product.location;
+            int xMiniLoc = product.xMiniLoc;
+            int yMiniLoc = product.yMiniLoc;
             
             Product_Stock.Text = product.getAvailability;
 
@@ -40,7 +42,8 @@ namespace ItemLocator
             }
 
             Product_IMG.Source = product.bi;
-            
+            Target.Margin = new Thickness(xMiniLoc, yMiniLoc, 0, 0);
+
         }
     }
 }
