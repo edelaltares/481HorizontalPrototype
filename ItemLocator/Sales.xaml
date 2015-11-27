@@ -12,21 +12,14 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <!-- LABEL -->
         <Label x:Name="salesLabel" Grid.Row="0" Content="Sales" HorizontalAlignment="Left" Margin="10,10,0,0" Width="160" VerticalAlignment="Center" Padding="0" FontSize="20" Grid.ColumnSpan="2" />
 
-        <!-- SEARCH -->
-        <Label x:Name="searchLabel" Grid.Row="1" Content="Search within sales:" HorizontalAlignment="Left" Margin="10,5,0,0" Width="160" VerticalAlignment="Top" Padding="0" FontSize="15" Grid.ColumnSpan="2" />
-        <TextBox x:Name="salesSearch" Grid.Row="1" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="26" Margin="10,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="240" TouchEnter="searchBox_TouchEnter" MouseEnter="searchBox_MouseEnter" SpellCheck.IsEnabled="True" Language="en-US" Grid.ColumnSpan="2"/>
-        <Image x:Name="magGlass" Grid.Row="1" HorizontalAlignment="Left" Height="18" Margin="257,35,0,0" VerticalAlignment="Top" Width="20" Source="/images/magGlass.png" Panel.ZIndex="100" Grid.Column="1" />
-        <Button x:Name="searchButton" Grid.Row="1" Content="Search" Width="70" Height="25" Margin="252,30,15,0" Padding="15,0,0,0" FontSize="14" BorderThickness="0" Click="newSearch" Grid.Column="1" />
-
         <!-- FILTERS -->
-        <Label x:Name="sortLabel" Grid.Row="2" Content="Sort by:" Margin="0,0,0,0" Grid.ColumnSpan="2" />
+        <Label x:Name="sortLabel" Grid.Row="1" Content="Sort by:" Margin="0,0,0,0" Grid.ColumnSpan="2" />
         <ComboBox x:Name="sortOptions" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="50,3,0,0" Grid.ColumnSpan="2">
             <ComboBoxItem Content="Name (A to Z)" Selected="sortNameA" />
             <ComboBoxItem Content="Name (Z to A)" Selected="sortNameZ" />
@@ -35,10 +28,10 @@
         </ComboBox>
 
         <!-- DIALOG MESSAGE -->
-        <Label x:Name="dialogMessage" Grid.Row="3" Content="" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Top" Padding="0"  FontSize="18.667" Foreground="#FFEE2D24" />
+        <Label x:Name="dialogMessage" Grid.Row="2" Content="" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Top" Padding="0"  FontSize="18.667" Foreground="#FFEE2D24" />
 
         <!-- LIST OF RESULTS -->
-        <ScrollViewer Grid.Row="4" Height="{Binding Path=ActualHeight,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=RowDefinition}}" VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" Margin="0,-15,0,0">
+        <ScrollViewer Grid.Row="3" Height="{Binding Path=ActualHeight,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=RowDefinition}}" VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" Margin="0,-15,0,0">
             <ListBox Name="salesListBox" Canvas.Left="0" Margin="0,0,0,0" HorizontalContentAlignment="Stretch" BorderBrush="{x:Null}">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>

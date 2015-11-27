@@ -10,6 +10,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="90" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="40" />
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0" x:Name="ItemGrid" Margin="0,0,0,0" Background="#FFE2E2E2">
@@ -35,5 +36,7 @@
             <Label x:Name="topAisle" Content="N/A" HorizontalAlignment="Left" Height="36" Margin="135,26,0,0" VerticalAlignment="Top" Width="60" FontSize="26.667" FontFamily="Arial Rounded MT Bold" Foreground="Black"/>
             <Ellipse x:Name="Target" HorizontalAlignment="Left" Height="20" Stroke="Red" Fill="Red"  VerticalAlignment="Top" Width="20" StrokeThickness="5"/>
         </Grid>
+
+        <Button x:Name="fullMapButton" Grid.Row="2" Content="SEE FULL MAP" Padding="10" Margin="10,0,10,0" Background="#FFEE2D24" Foreground="White" />
     </Grid>
 </UserControl>
