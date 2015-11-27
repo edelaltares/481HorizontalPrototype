@@ -95,7 +95,7 @@ namespace ItemLocator
         {
             name = newName;
 
-            String imagelocation = "images/Products/" + newName.ToLower().Replace(' ', '_') + ".png";
+            String imagelocation = "images/Products/" + newName.ToLower().Replace(' ', '-') + ".png";
             Console.WriteLine(imagelocation);
             Image prodImg = new Image();
             bi = new BitmapImage();

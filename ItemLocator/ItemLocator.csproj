@@ -147,7 +147,8 @@
     <Resource Include="images\magGlass.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="images\Products\meringue_powder.png" />
+    <Resource Include="images\Products\apple.png" />
+    <Content Include="images\Products\meringue-powder.png" />
     <Resource Include="images\x.png" />
     <Resource Include="images\Products\unknown.png" />
   </ItemGroup>
