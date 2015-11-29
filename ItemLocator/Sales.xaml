@@ -32,7 +32,7 @@
 
         <!-- LIST OF RESULTS -->
         <ScrollViewer Grid.Row="3" VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <ListBox Name="salesListBox" Canvas.Left="0" Margin="0,0,0,0" HorizontalContentAlignment="Stretch" BorderBrush="{x:Null}">
+            <ListBox Name="salesListBox" Canvas.Left="0" Margin="0,0,0,0" HorizontalContentAlignment="Stretch" BorderBrush="{x:Null}" SelectionChanged="itemClick">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
                         <VirtualizingStackPanel Orientation="Vertical"/>

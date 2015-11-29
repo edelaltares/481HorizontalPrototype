@@ -99,5 +99,14 @@ namespace ItemLocator
 
             salesListBox.ItemsSource = salesList;
         }
+        
+        private void itemClick(object sender, SelectionChangedEventArgs e)
+        {
+            MainWindow main = (MainWindow)Window.GetWindow(this);
+
+            Results_Map itemMap = new Results_Map((Items)salesListBox.SelectedItem);
+
+            main.newPage(itemMap);
+        }
     }
 }

@@ -120,6 +120,18 @@ namespace ItemLocator
                 salesImage.Visibility = Visibility.Collapsed;
             }
         }
+
+        private void stopMenu()
+        {
+            menuRect.Visibility = Visibility.Collapsed;
+            homeButton.Visibility = Visibility.Collapsed;
+            mapButton.Visibility = Visibility.Collapsed;
+            salesButton.Visibility = Visibility.Collapsed;
+
+            searchImage.Visibility = Visibility.Collapsed;
+            mapImage.Visibility = Visibility.Collapsed;
+            salesImage.Visibility = Visibility.Collapsed;
+        }
         
         private void HomeButtonClick(object sender, RoutedEventArgs e)
         {
@@ -127,6 +139,8 @@ namespace ItemLocator
             {
                 backButton.Visibility = Visibility.Visible;
             }
+
+            stopMenu();
 
             Navigation.NavigateTo(search);
         }
@@ -137,7 +151,9 @@ namespace ItemLocator
             {
                 backButton.Visibility = Visibility.Visible;
             }
-            
+
+            stopMenu();
+
             Navigation.NavigateTo(map);
         }
 
@@ -152,6 +168,8 @@ namespace ItemLocator
             {
                 sales.salesListBox.ItemsSource = sales.findSales();
             }
+
+            stopMenu();
 
             Navigation.NavigateTo(sales);
         }
