@@ -135,5 +135,14 @@ namespace ItemLocator
             resultSearch.Text = "";
             clearButton.Visibility = Visibility.Collapsed;
         }
+
+        private void itemClick(object sender, SelectionChangedEventArgs e)
+        {
+            MainWindow main = (MainWindow)Window.GetWindow(this);
+
+            Results_Map itemMap = new Results_Map((Items)resultsListBox.SelectedItem);
+
+            main.newPage(itemMap);
+        }
     }
 }
