@@ -20,7 +20,7 @@
 
         <!-- FILTERS -->
         <Label x:Name="sortLabel" Grid.Row="1" Content="Sort by:" Margin="0,0,0,0" Grid.ColumnSpan="2" />
-        <ComboBox x:Name="sortOptions" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="50,3,0,0" Grid.ColumnSpan="2">
+        <ComboBox x:Name="sortOptions" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="50,3,0,0" Grid.ColumnSpan="2">
             <ComboBoxItem Content="Name (A to Z)" Selected="sortNameA" />
             <ComboBoxItem Content="Name (Z to A)" Selected="sortNameZ" />
             <ComboBoxItem Content="Price (Low to High)" Selected="sortPriceLow" />
