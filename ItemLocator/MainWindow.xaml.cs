@@ -22,7 +22,7 @@ namespace ItemLocator
     {
         private Map map = new Map();
         private Sales sales;
-        private Items[] itemsList;
+        private Items[] itemsList = null;
         private Search search = new Search();
 
         public MainWindow()
@@ -172,6 +172,11 @@ namespace ItemLocator
             stopMenu();
 
             Navigation.NavigateTo(sales);
+        }
+        
+        public Items[] getItems()
+        {
+            return itemsList;
         }
     }
 }

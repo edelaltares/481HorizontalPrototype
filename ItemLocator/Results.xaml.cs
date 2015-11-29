@@ -81,7 +81,17 @@ namespace ItemLocator
 
         private void newSearch(object sender, RoutedEventArgs e)
         {
+            MainWindow main = (MainWindow)Window.GetWindow(this);
 
+            Search aSearch = new Search();
+
+            aSearch.itemsList = main.getItems();
+
+            List<Items> newResultsList = aSearch.doSearch(resultSearch.Text);
+
+            Results newResultPage = new Results(newResultsList, resultSearch.Text);
+            
+            main.newPage(newResultPage);
         }
 
         private void searchBox_MouseEnter(object sender, MouseEventArgs e)

@@ -24,8 +24,8 @@
             <TextBlock Grid.Row="0" Grid.Column="1" x:Name="Product_Name" HorizontalAlignment="Left" Margin="5,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontWeight="Bold" FontSize="14.667"/>
             <TextBlock Grid.Row="0" Grid.Column="1" x:Name="Product_Price" HorizontalAlignment="Left" Margin="5,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="13.333"/>
             <TextBlock Grid.Row="0" Grid.Column="1" x:Name="Product_OldPrice" HorizontalAlignment="Left" Margin="5,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="13.333" Foreground="Red" TextDecorations="Strikethrough" />
-            <TextBlock Grid.Row="0" Grid.Column="1" x:Name="Product_SalePrice" HorizontalAlignment="Left" Margin="5,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="13.333"/>
-            <TextBlock Grid.Row="0" Grid.Column="1" x:Name="Product_Stock" HorizontalAlignment="Left" Margin="5,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="13.333"/>
+            <TextBlock Grid.Row="0" Grid.Column="1" x:Name="Product_SalePrice" HorizontalAlignment="Left" Margin="5,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="13.333"/>
+            <TextBlock Grid.Row="0" Grid.Column="1" x:Name="Product_Stock" HorizontalAlignment="Left" Margin="5,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="13.333"/>
             <TextBlock Grid.Row="0" Grid.Column="2" x:Name="AisleNum" HorizontalAlignment="Center" Margin="0,0,0,0" Padding="5,5,5,5"  TextWrapping="Wrap" Text="Yo" VerticalAlignment="Top" TextAlignment="Center" FontSize="25" FontWeight="Bold"/>
         </Grid>
 

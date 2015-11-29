@@ -33,8 +33,11 @@ namespace ItemLocator
 
             if (product.salePrice != 0)
             {
+                Product_Price.Visibility = Visibility.Collapsed;
                 Product_OldPrice.Text = product.oldPrice.ToString();
                 Product_SalePrice.Text = product.salePrice.ToString();
+                Product_SalePrice.Margin = new Thickness(5, 45, 0, 0);
+                Product_Stock.Margin = new Thickness(5, 60, 0, 0);
             }
             else
             {

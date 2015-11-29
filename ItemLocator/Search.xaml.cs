@@ -54,7 +54,7 @@ namespace ItemLocator
 
         }
 
-        private List<Items> doSearch(String keywords)
+        public List<Items> doSearch(String keywords)
         {
             List<Items> searchList = new List<Items>();
 
