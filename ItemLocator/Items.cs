@@ -90,6 +90,12 @@ namespace ItemLocator
             set;
         }
 
+        public Boolean onSale
+        {
+            get;
+            set;
+        }
+
 
         public Items(String newName, String newLoc, Boolean stock, double newPrice, double newSalePrice, int smallX, int smallY, int largeX, int largeY)
         {
@@ -117,10 +123,12 @@ namespace ItemLocator
             if (newSalePrice != 0)
             {
                 price = newSalePrice;
+                onSale = true;
             }
             else
             {
                 price = newPrice;
+                onSale = false;
             }
 
             oldPrice = newPrice;

@@ -63,8 +63,9 @@ namespace ItemLocator
             {
                 dialogMessage.Text = "Your search returned 0 results.\n\nThe product you're looking for may:\n   - Not be sold here, or\n   - You may have made a spelling mistake.";
             }
+            
         }
-
+        
         private void clickBack(object sender, RoutedEventArgs e)
         {
 
@@ -154,5 +155,26 @@ namespace ItemLocator
 
             main.newPage(itemMap);
         }
+
+        public IEnumerable<T> FindVisualChild<T>(DependencyObject depObj) where T : DependencyObject
+        {
+            if (depObj != null)
+            {
+                for (int i = 0; i < VisualTreeHelper.GetChildrenCount(depObj); i++)
+                {
+                    DependencyObject child = VisualTreeHelper.GetChild(depObj, i);
+                    if (child != null && child is T)
+                    {
+                        yield return (T)child;
+                    }
+
+                    foreach (T childOfChild in FindVisualChild<T>(child))
+                    {
+                        yield return childOfChild;
+                    }
+                }
+            }
+        }
+
     }
 }
