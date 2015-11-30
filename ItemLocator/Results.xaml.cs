@@ -36,7 +36,7 @@ namespace ItemLocator
             if(searchWord.Length == 0)
             {
                 dialogMessage.Text = "You did not search for anything.\nPlease try again.";
-                keywordLabel.Content = searchWord;
+                keywordLabel.Text = searchWord;
                 resultSearch.Text = searchWord;
                 return;
             }
@@ -50,19 +50,19 @@ namespace ItemLocator
             {
                 dialogMessage.Text = "Your search returned more than 10 results.\n\nYou may wish to make your search more specific to return less.";
                 resultsListBox.ItemsSource = result;
-                keywordLabel.Content = searchWord;
+                keywordLabel.Text = searchWord;
                 resultSearch.Text = searchWord;
             }
             else if (result.Count() != 0)
             {
                 resultsListBox.ItemsSource = result;
-                keywordLabel.Content = searchWord;
+                keywordLabel.Text = searchWord;
                 resultSearch.Text = searchWord;
             }
             else
             {
                 dialogMessage.Text = "Your search returned 0 results.\n\nThe product you're looking for may:\n   - Not be sold here, or\n   - You may have made a spelling mistake.";
-                keywordLabel.Content = searchWord;
+                keywordLabel.Text = searchWord;
                 resultSearch.Text = searchWord;
             }
             

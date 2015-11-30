@@ -18,13 +18,14 @@
 
         <!-- LABEL -->
         <Label x:Name="resultsLabel" Grid.Row="0" Content="Search results for:" HorizontalAlignment="Left" Margin="5,0,0,0" Width="160" VerticalAlignment="Top" Padding="0" FontSize="18.667" />
-        <Label x:Name="keywordLabel" Grid.Row="0" Content="" HorizontalAlignment="Left" Margin="155,0,0,0" VerticalAlignment="Top" Padding="0"  FontSize="18.667" Foreground="#FFEE2D24" />
+        <TextBlock x:Name="keywordLabel" Grid.Row="0" Text="" HorizontalAlignment="Left" Margin="155,0,0,0" VerticalAlignment="Top" Padding="0"  FontSize="18.667" Foreground="#FFEE2D24" TextWrapping="Wrap" />
 
         <!-- SEARCH -->
-        <TextBox x:Name="resultSearch" Grid.Row="1" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="25" Margin="10,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="240" TouchEnter="searchBox_TouchEnter" MouseEnter="searchBox_MouseEnter" SpellCheck.IsEnabled="True" Language="en-US" TextChanged="showClear" KeyDown="newSearchKey" />
-        <Image x:Name="magGlass" Grid.Row="1" HorizontalAlignment="Left" Height="18" Margin="255,5,0,0" VerticalAlignment="Top" Width="20" Source="/images/magGlass.png" Panel.ZIndex="100" />
-        <Button x:Name="searchButton" Grid.Row="1" Content="Search" Width="70" Height="25" Margin="243,0,0,0" Padding="15,0,0,0" FontSize="14" BorderThickness="0" Click="newSearch" />
-        <Button x:Name="clearButton" Grid.Row="1" Grid.Column="0" Width="15" Height="15" Margin="135,1,0,0" Padding="0,0,0,0" FontSize="12" BorderThickness="0" Click="clearSearch" Background="Transparent" Panel.ZIndex="200" VerticalContentAlignment="Center" Visibility="Collapsed">
+        <Label x:Name="searchLabel" Grid.Row="1" Content="Search for another product:" HorizontalAlignment="Left" Margin="5,0,0,0" Width="Auto" VerticalAlignment="Top" Padding="0" FontSize="15" />
+        <TextBox x:Name="resultSearch" Grid.Row="1" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="25" Margin="7,20,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="240" TouchEnter="searchBox_TouchEnter" MouseEnter="searchBox_MouseEnter" SpellCheck.IsEnabled="True" Language="en-US" TextChanged="showClear" KeyDown="newSearchKey" />
+        <Image x:Name="magGlass" Grid.Row="1" HorizontalAlignment="Left" Height="18" Margin="255,20,0,0" VerticalAlignment="Top" Width="20" Source="/images/magGlass.png" Panel.ZIndex="100" />
+        <Button x:Name="searchButton" Grid.Row="1" Content="Search" Width="70" Height="25" Margin="243,15,0,0" Padding="15,0,0,0" FontSize="14" BorderThickness="0" Click="newSearch" />
+        <Button x:Name="clearButton" Grid.Row="1" Grid.Column="0" Width="15" Height="15" Margin="135,15,0,0" Padding="0,0,0,0" FontSize="12" BorderThickness="0" Click="clearSearch" Background="Transparent" Panel.ZIndex="200" VerticalContentAlignment="Center" Visibility="Collapsed">
             <Image Source="images/x.png" />
             <!-- <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div> -->
         </Button>
