@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ItemLocator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="350"
+        Title="MainWindow" Height="600" Width="340"
         ResizeMode="NoResize" >
 
-    <Grid Name="theGrid" Height="600" Width="330">
-        
+    <Grid Name="theGrid" Height="600" Width="330" HorizontalAlignment="Center">
+
         <Grid.RowDefinitions>
             <RowDefinition Height="40" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        
+
         <!-- ROW BG -->
         <Rectangle Grid.Row="0" Fill="#FFEE2D24" HorizontalAlignment="Left" Margin="0,0,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="400" Height="40" />
 
@@ -27,11 +27,30 @@
         <Label Grid.Row="0" Content="MENU" Foreground="White" Margin="50,5,0,0" Padding="0" Width="Auto" Height="Auto" FontSize="20" Panel.ZIndex="100" />
 
         <!-- MENU BUTTON -->
-        <Button Grid.Row="0" x:Name="button" BorderThickness="0" Background="Transparent" HorizontalAlignment="Left" Margin="5,4,0,0" VerticalAlignment="Top" Width="105" Height="30" Click="ShowMenu" Panel.ZIndex="200" />
-
+        <Button Grid.Row="0" x:Name="button" BorderThickness="0" Background="Transparent" HorizontalAlignment="Left" Margin="5,4,0,0" VerticalAlignment="Top" Width="105" Height="30" Click="ShowMenu" Panel.ZIndex="200">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="Border" Background="Transparent" BorderBrush="Transparent">
+                        <ContentPresenter Margin="2" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="Border" Property="Background" Value="Transparent" />
+                            <Setter TargetName="Border" Property="Cursor" Value="Hand" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter TargetName="Border" Property="Background" Value="White" />
+                            <Setter TargetName="Border" Property="BorderBrush" Value="Transparent" />
+                            <Setter Property="Opacity" Value="0.2" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        
         <!-- BACK BUTTON -->
         <Button Grid.Row="0" x:Name="backButton" Content="BACK" FontSize="20" BorderThickness="0" Background="White" Foreground="#FFEE2D24" HorizontalAlignment="Right" Margin="0,4,5,0" VerticalAlignment="Top" Width="75" Height="30" Panel.ZIndex="200" Visibility="Hidden" />
-
+        
         <!-- MENU -->
         <Rectangle x:Name="menuRect" Grid.Row="1" Width="150" Height="550" Margin="0" HorizontalAlignment="Left" Fill="#FFEE2D24" Visibility="Hidden" Panel.ZIndex="100" />
         <Button x:Name="homeButton" Grid.Row="1" HorizontalContentAlignment="Left" Foreground="White" Content="Search" HorizontalAlignment="Left" Height="46" VerticalAlignment="Top" Width="150" Background="#FFEE2D24" BorderBrush="White" BorderThickness="0 0 0 0" Click="HomeButtonClick" Margin="0,0,0,0" Padding="55,0,0,0" Visibility="Collapsed" Panel.ZIndex="200" />
