@@ -20,7 +20,7 @@
 
         <!-- SEARCH -->
         <Label x:Name="searchLabel" Grid.Row="1" Grid.Column="0" Content="Search for an item:" FontSize="20" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="Auto" Margin="5,30,0,0" />
-        <TextBox x:Name="searchBox" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Height="25" Margin="10,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" TouchEnter="searchBox_TouchEnter" MouseEnter="searchBox_MouseEnter" SpellCheck.IsEnabled="True" Language="en-US" TextChanged="showClear"/>
+        <TextBox x:Name="searchBox" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Height="25" Margin="10,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" TouchEnter="searchBox_TouchEnter" MouseEnter="searchBox_MouseEnter" SpellCheck.IsEnabled="True" Language="en-US" TextChanged="showClear" KeyDown="newSearchKey" />
         <Image x:Name="magGlass" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Height="18" Margin="258,70,0,0" VerticalAlignment="Top" Width="20" Source="/images/magGlass.png" Panel.ZIndex="100" />
         <Button x:Name="searchButton" Grid.Row="1" Grid.Column="0" Content="Search" Width="70" Height="25" Margin="250,67,0,0" Padding="15,0,0,0" FontSize="14" BorderThickness="0" Click="newSearch" />
         <Button x:Name="clearButton" Grid.Row="1" Grid.Column="0" Width="15" Height="15" Margin="140,68,0,0" Padding="0,0,0,0" FontSize="12" Visibility="Collapsed" BorderThickness="0" Click="clearSearch" Background="Transparent" Panel.ZIndex="200" VerticalContentAlignment="Center">

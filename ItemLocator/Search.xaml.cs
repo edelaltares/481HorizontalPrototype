@@ -84,5 +84,13 @@ namespace ItemLocator
             searchBox.Text = "";
             clearButton.Visibility = Visibility.Collapsed;
         }
+        
+        private void newSearchKey(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                newSearch(sender, e);
+            }
+        }
     }
 }
