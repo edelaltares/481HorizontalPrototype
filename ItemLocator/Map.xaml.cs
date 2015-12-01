@@ -23,6 +23,12 @@ namespace ItemLocator
         public Map()
         {
             InitializeComponent();
+            Target.Margin = new Thickness(-76, 0, 0, 0);
+        }
+        public Map(Items product)
+        {
+            InitializeComponent();
+            Target.Margin = new Thickness(product.xLargeLoc, product.yLargeLoc, 0, 0);
         }
     }
 }

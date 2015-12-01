@@ -30,11 +30,11 @@
         </Grid>
 
         <Grid Grid.Row="1" x:Name="MapGrid" Margin="0,0,0,0" VerticalAlignment="Center">
-            <Image x:Name="MiniMap" HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="330" Source="images/Store/aisle.png"/>
+            <Image x:Name="MiniMap" HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="330" Source="images/Store/Aisle.png"/>
             <Label x:Name="midAisle" Content="N/A" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="36" Margin="132,112,0,0" VerticalAlignment="Top" Width="60" FontSize="26.667" FontFamily="Arial Rounded MT Bold" Foreground="Black"/>
             <Label x:Name="bottomAisle" Content="N/A" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="48" Margin="20,195,0,0" VerticalAlignment="Top" Width="283" FontSize="26.667" FontFamily="Arial Rounded MT Bold" Foreground="Black"/>
             <Label x:Name="topAisle" Content="N/A" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="36" Margin="20,26,0,0" VerticalAlignment="Top" Width="283" FontSize="26.667" FontFamily="Arial Rounded MT Bold" Foreground="Black"/>
-            <Ellipse x:Name="Target" HorizontalAlignment="Left" Height="20" Stroke="Red" Fill="Red"  VerticalAlignment="Top" Width="20" StrokeThickness="5"/>
+            <Ellipse x:Name="Target" HorizontalAlignment="Left" Height="20" Stroke="Red" Fill="Red"  VerticalAlignment="Top" Width="20" StrokeThickness="5" Margin="441,42,-131,0" RenderTransformOrigin="2.074,-0.153"/>
         </Grid>
 
         <Button x:Name="fullMapButton" Grid.Row="2" Content="SEE FULL MAP" Padding="10" Margin="10,0,10,0" Background="#FFEE2D24" Foreground="White" Click="fullMapButton_Click" />

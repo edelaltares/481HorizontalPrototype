@@ -35,9 +35,9 @@ namespace ItemLocator
 
             // Items
             itemsList = new Items[20];
-            Items apple = new Items("Apple", "Produce", true, 0.99, 0, 61, 110, 1, 1);
+            Items apple = new Items("Apple", "Produce", true, 0.99, 0, 103, 67, 93, 43);
             itemsList[0] = apple;
-            Items banana = new Items("Banana", "Produce", true, 0.99, 0, 216, 141, 1, 1);
+            Items banana = new Items("Banana", "Produce", true, 0.99, 0, 237, 128, 177, 85);
             itemsList[1] = banana;
             Items rice = new Items("Rice", "Aisle 1", true, 11.99, 0, 61, 110, 99, 393);
             itemsList[2] = rice;
@@ -63,17 +63,17 @@ namespace ItemLocator
             itemsList[12] = cheerios;
             Items orangeJuice = new Items("Orange Juice", "Aisle 6", true, 7.99, 0, 115, 140, 125, 182);
             itemsList[13] = orangeJuice;
-            Items activiaYogurt = new Items("Activia Yogurt", "Dairy", false, 5.99, 3.00, 1, 1, 1, 1);
+            Items activiaYogurt = new Items("Activia Yogurt", "Dairy", false, 5.99, 3.00, 166, 170, 48, 262);
             itemsList[14] = activiaYogurt;
-            Items milk = new Items("Milk", "Dairy", true, 6.29, 0, 1, 1, 1, 1);
+            Items milk = new Items("Milk", "Dairy", true, 6.29, 0, 166, 64, 48, 200);
             itemsList[15] = milk;
-            Items bread = new Items("Bread", "Bakery", true, 9.99, 0, 1, 1, 1, 1);
+            Items bread = new Items("Bread", "Bakery", true, 9.99, 0, 101, 136, 98, 476);
             itemsList[16] = bread;
-            Items muffins = new Items("Muffins", "Bakery", true, 6.99, 0, 1, 1, 1, 1);
+            Items muffins = new Items("Muffins", "Bakery", true, 6.99, 0, 198, 101, 172, 463);
             itemsList[17] = muffins;
-            Items chickenBreast = new Items("Chicken Breast", "Meat", true, 11.99, 0, 1, 1, 1, 1);
+            Items chickenBreast = new Items("Chicken Breast", "Meat", true, 11.99, 0, 149, 175, 42, 448);
             itemsList[18] = chickenBreast;
-            Items frozenShrimp = new Items("Frozen Shrimp", "Meat", true, 14.99, 11.99, 1, 1, 1, 1);
+            Items frozenShrimp = new Items("Frozen Shrimp", "Meat", true, 14.99, 11.99, 172, 212, 56, 477);
             itemsList[19] = frozenShrimp;
 
             sales = new Sales(itemsList);
@@ -99,6 +99,7 @@ namespace ItemLocator
         {
             if (!menuRect.IsVisible)
             {
+                closeMenuRect.Visibility = Visibility.Visible;
                 menuRect.Visibility = Visibility.Visible;
                 homeButton.Visibility = Visibility.Visible;
                 mapButton.Visibility = Visibility.Visible;
@@ -110,6 +111,7 @@ namespace ItemLocator
             }
             else
             {
+                closeMenuRect.Visibility = Visibility.Collapsed;
                 menuRect.Visibility = Visibility.Collapsed;
                 homeButton.Visibility = Visibility.Collapsed;
                 mapButton.Visibility = Visibility.Collapsed;
@@ -123,6 +125,7 @@ namespace ItemLocator
 
         private void stopMenu()
         {
+            closeMenuRect.Visibility = Visibility.Collapsed;
             menuRect.Visibility = Visibility.Collapsed;
             homeButton.Visibility = Visibility.Collapsed;
             mapButton.Visibility = Visibility.Collapsed;
@@ -177,6 +180,11 @@ namespace ItemLocator
         public Items[] getItems()
         {
             return itemsList;
+        }
+
+        private void closeMenu(object sender, MouseButtonEventArgs e)
+        {
+            stopMenu();
         }
     }
 }

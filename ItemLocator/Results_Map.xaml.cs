@@ -20,10 +20,12 @@ namespace ItemLocator
     /// </summary>
     public partial class Results_Map : UserControl
     {
+        Items item;
         public Results_Map(Items product)
         {
             InitializeComponent();
 
+            item = product;
             Product_Name.Text = product.name;
             AisleNum.Text = product.location;
             int xMiniLoc = product.xMiniLoc;
@@ -135,7 +137,7 @@ namespace ItemLocator
         {
             MainWindow main = (MainWindow)Window.GetWindow(this);
 
-            Map Map = new Map();
+            Map Map = new Map(item);
 
             main.newPage(Map);
         }
