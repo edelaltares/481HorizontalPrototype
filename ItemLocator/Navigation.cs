@@ -31,13 +31,16 @@ namespace ItemLocator
 
         public static void NavigateTo(UserControl userControl)
         {
-            if (ContentContainer.Children.Count == 1)  // if a page is loaded
+            if (ContentContainer.Children.Count == 1 )  // if a page is loaded
             {
                 navStack.Push(ContentContainer.Children[0] as UserControl);
                 ContentContainer.Children.Clear();
             }
 
-            ContentContainer.Children.Add(userControl);
+            if (navStack.Pop() != ContentContainer.Children[0])
+            {
+                ContentContainer.Children.Add(userControl);
+            }
         }
 
         private static void BackButton_Click(object sender, RoutedEventArgs e)

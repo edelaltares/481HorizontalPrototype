@@ -47,12 +47,12 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        
+
         <!-- BACK BUTTON -->
         <Button Grid.Row="0" x:Name="backButton" Content="BACK" FontSize="20" BorderThickness="0" Background="White" Foreground="#FFEE2D24" HorizontalAlignment="Right" Margin="0,4,5,0" VerticalAlignment="Top" Width="75" Height="30" Panel.ZIndex="200" Visibility="Hidden" />
-        
+
         <!-- MENU -->
-        <Rectangle x:Name="closeMenuRect" Grid.Row="1" Width="330" Height="600" Margin="0, 0, 0, 0" HorizontalAlignment="Left" Fill="#FFEE2D24" Visibility="Hidden" Panel.ZIndex="100" Opacity="0" MouseUp="closeMenu"/>
+        <Rectangle x:Name="closeMenuRect" Width="330" Margin="0,0,0,19" HorizontalAlignment="Left" Fill="#FFEE2D24" Visibility="Visible" Panel.ZIndex="100" Opacity="0" MouseUp="closeMenu" Grid.RowSpan="2"/>
         <Rectangle x:Name="menuRect" Grid.Row="1" Width="150" Height="550" Margin="0" HorizontalAlignment="Left" Fill="#FFEE2D24" Visibility="Hidden" Panel.ZIndex="100" />
         <Button x:Name="homeButton" Grid.Row="1" HorizontalContentAlignment="Left" Foreground="White" Content="Search" HorizontalAlignment="Left" Height="46" VerticalAlignment="Top" Width="150" Background="#FFEE2D24" BorderBrush="White" BorderThickness="0 0 0 0" Click="HomeButtonClick" Margin="0,0,0,0" Padding="55,0,0,0" Visibility="Collapsed" Panel.ZIndex="200" />
         <Button x:Name="mapButton" Grid.Row="1" HorizontalContentAlignment="Left" Foreground="White" Content="Map" HorizontalAlignment="Left" Height="46" Margin="0,46,0,0" VerticalAlignment="Top" Width="150" Background="#FFEE2D24" BorderBrush="White" BorderThickness="0 1 0 0 " Click="MapButtonClick" Padding="55,0,0,0" Visibility="Collapsed" Panel.ZIndex="200" />

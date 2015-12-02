@@ -8,10 +8,10 @@
              d:DesignHeight="525" d:DesignWidth="350">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="31*"/>
-            <RowDefinition Height="74*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="505" VerticalAlignment="Top" Width="303" Margin="20,10,0,0" Source="images/Store/SimpleStoreFinal.png" Grid.RowSpan="2"/>
-        <Ellipse x:Name="Target" HorizontalAlignment="Left" Height="13" Stroke="Red" Fill="Red" Margin="-76,70,0,0" VerticalAlignment="Top" Width="14" RenderTransformOrigin="2.593,-3.17"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="505" VerticalAlignment="Top" Width="303" Margin="20,2,0,0" Source="images/Store/SimpleStoreFinal.png" Grid.Row="1"/>
+        <Ellipse x:Name="Target" HorizontalAlignment="Left" Height="17" Stroke="Red" Fill="Red" Margin="-217,87,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="2.593,-3.17" Grid.Row="1"/>
     </Grid>
 </UserControl>

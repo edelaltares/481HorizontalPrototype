@@ -122,7 +122,7 @@ namespace ItemLocator
 
             if (newSalePrice != 0)
             {
-                price = newSalePrice;
+                price = newPrice;
                 onSale = true;
             }
             else
