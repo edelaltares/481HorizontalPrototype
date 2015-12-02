@@ -91,7 +91,7 @@ namespace ItemLocator
             {
                 backButton.Visibility = Visibility.Visible;
             }
-
+            
             Navigation.NavigateTo(nextPage);
         }
 
