@@ -38,6 +38,7 @@ namespace ItemLocator
                 dialogMessage.Text = "You did not search for anything.\nPlease try again.";
                 keywordLabel.Text = searchWord;
                 resultSearch.Text = searchWord;
+                resultList = null;
                 return;
             }
             
@@ -109,30 +110,42 @@ namespace ItemLocator
 
         private void sortNameA(object sender, RoutedEventArgs e)
         {
-            resultList = resultList.OrderBy(Items => Items.name).ToList();
+            if (resultList != null)
+            {
+                resultList = resultList.OrderBy(Items => Items.name).ToList();
 
-            resultsListBox.ItemsSource = resultList;
+                resultsListBox.ItemsSource = resultList;
+            }
         }
 
         private void sortNameZ(object sender, RoutedEventArgs e)
         {
-            resultList = resultList.OrderBy(Items => Items.name).Reverse().ToList();
+            if (resultList != null)
+            {
+                resultList = resultList.OrderBy(Items => Items.name).Reverse().ToList();
 
-            resultsListBox.ItemsSource = resultList;
+                resultsListBox.ItemsSource = resultList;
+            }
         }
 
         private void sortPriceLow(object sender, RoutedEventArgs e)
         {
-            resultList = resultList.OrderBy(Items => Items.price).ToList();
+            if (resultList != null)
+            {
+                resultList = resultList.OrderBy(Items => Items.price).ToList();
 
-            resultsListBox.ItemsSource = resultList;
+                resultsListBox.ItemsSource = resultList;
+            }
         }
 
         private void sortPriceHigh(object sender, RoutedEventArgs e)
         {
-            resultList = resultList.OrderBy(Items => Items.price).Reverse().ToList();
+            if (resultList != null)
+            {
+                resultList = resultList.OrderBy(Items => Items.price).Reverse().ToList();
 
-            resultsListBox.ItemsSource = resultList;
+                resultsListBox.ItemsSource = resultList;
+            }
         }
 
         private void showClear(object sender, TextChangedEventArgs e)
@@ -164,6 +177,13 @@ namespace ItemLocator
             { 
                 newSearch(sender, e);
             }
+        }
+
+        private void scrollMouse(object sender, MouseWheelEventArgs e)
+        {
+            ScrollViewer scv = (ScrollViewer)sender;
+            scv.ScrollToVerticalOffset(scv.VerticalOffset - e.Delta);
+            e.Handled = true;
         }
     }
 }

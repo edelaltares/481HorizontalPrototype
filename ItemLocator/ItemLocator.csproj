@@ -166,6 +166,8 @@
     <Resource Include="images\Products\olive-oil.png" />
     <Resource Include="images\Products\chicken-breast.png" />
     <Resource Include="images\Products\frozen-shrimp.png" />
+    <Resource Include="images\Products\dozen-eggs.png" />
+    <Resource Include="images\Products\half-dozen-eggs.png" />
     <Content Include="images\Products\meringue-powder.png" />
     <Resource Include="images\x.png" />
     <Resource Include="images\Products\unknown.png" />

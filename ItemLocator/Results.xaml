@@ -42,7 +42,7 @@
         <TextBlock x:Name="dialogMessage" Grid.Row="3" Text="" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Top" Padding="0"  FontSize="15" Foreground="#FFEE2D24" />
 
         <!-- LIST OF RESULTS -->
-        <ScrollViewer Grid.Row="4" VerticalScrollBarVisibility="Auto">
+        <ScrollViewer Grid.Row="4" VerticalScrollBarVisibility="Auto" MouseWheel="scrollMouse">
             <ListBox Control.MouseDoubleClick="itemClick" Name="resultsListBox" Canvas.Left="0" Canvas.Top="40" HorizontalContentAlignment="Stretch" BorderBrush="{x:Null}" Height="Auto" SelectionChanged="itemClick">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>

@@ -93,3 +93,29 @@ C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\
 C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\App.baml
 C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\ItemLocator_Content.g.cs
 C:\Users\Edel\Desktop\Copy\SCHOOL\2015 - FALL\CPSC 481\Project\Code\ItemLocator\obj\Debug\ItemLocator.csprojResolveAssemblyReference.cache
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\bin\Debug\ItemLocator.exe.config
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\bin\Debug\ItemLocator.exe
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\bin\Debug\ItemLocator.pdb
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\obj\Debug\ItemLocator.csprojResolveAssemblyReference.cache
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\obj\Debug\MainWindow.g.cs
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\obj\Debug\Map.g.cs
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\obj\Debug\Results.g.cs
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\obj\Debug\Results_Map.g.cs
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\obj\Debug\Sales.g.cs
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\obj\Debug\Search.g.cs
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\obj\Debug\App.g.cs
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\obj\Debug\ItemLocator_Content.g.cs
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\obj\Debug\ItemLocator_MarkupCompile.cache
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\obj\Debug\ItemLocator_MarkupCompile.lref
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\obj\Debug\App.baml
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\obj\Debug\MainWindow.baml
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\obj\Debug\Map.baml
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\obj\Debug\Results.baml
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\obj\Debug\Results_Map.baml
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\obj\Debug\Sales.baml
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\obj\Debug\Search.baml
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\obj\Debug\ItemLocator.g.resources
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\obj\Debug\ItemLocator.Properties.Resources.resources
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\obj\Debug\ItemLocator.csproj.GenerateResource.Cache
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\obj\Debug\ItemLocator.exe
+\\cs-fs01\Profiles\ug\ltvandyk\Desktop\CPSC481-master\CPSC481-master\ItemLocator\obj\Debug\ItemLocator.pdb

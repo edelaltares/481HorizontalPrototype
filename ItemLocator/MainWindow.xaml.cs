@@ -34,7 +34,7 @@ namespace ItemLocator
             Navigation.BackButton = backButton;
 
             // Items
-            itemsList = new Items[20];
+            itemsList = new Items[22];
             Items apple = new Items("Apple", "Produce", true, 0.99, 0, 103, 67, 93, 43);
             itemsList[0] = apple;
             Items banana = new Items("Banana", "Produce", true, 0.99, 0, 237, 128, 177, 85);
@@ -75,6 +75,10 @@ namespace ItemLocator
             itemsList[18] = chickenBreast;
             Items frozenShrimp = new Items("Frozen Shrimp", "Meat", true, 14.99, 11.99, 172, 212, 56, 477);
             itemsList[19] = frozenShrimp;
+            Items halfDozenEggs = new Items("Half Dozen Eggs", "Dairy", true, 1.99, 0, 166, 150, 48, 240);
+            itemsList[20] = halfDozenEggs;
+            Items dozenEggs = new Items("Dozen Eggs", "Dairy", true, 2.99, 0, 166, 151, 48, 241);
+            itemsList[21] = dozenEggs;
 
             sales = new Sales(itemsList);
             search.itemsList = itemsList;
@@ -91,7 +95,7 @@ namespace ItemLocator
             {
                 backButton.Visibility = Visibility.Visible;
             }
-            
+
             Navigation.NavigateTo(nextPage);
         }
 
