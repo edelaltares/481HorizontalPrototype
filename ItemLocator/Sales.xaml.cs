@@ -99,7 +99,13 @@ namespace ItemLocator
 
             salesListBox.ItemsSource = salesList;
         }
-        
+
+        private void sortByLocation(object sender, RoutedEventArgs e)
+        {
+            salesList = salesList.OrderBy(Items => Items.location).ToList();
+            salesListBox.ItemsSource = salesList;
+        }
+
         private void itemClick(object sender, SelectionChangedEventArgs e)
         {
             MainWindow main = (MainWindow)Window.GetWindow(this);

@@ -29,18 +29,35 @@
             <Image Source="images/x.png" />
             <!-- <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div> -->
         </Button>
-        <!-- FILTERS -->
-        <Label x:Name="sortLabel" Grid.Row="2" Content="Sort by:" Margin="0,0,0,0" Grid.ColumnSpan="2" />
-        <ComboBox x:Name="sortOptions" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="50,3,0,0" Grid.ColumnSpan="2">
-            <ComboBoxItem Content="Name (A to Z)" Selected="sortNameA" />
-            <ComboBoxItem Content="Name (Z to A)" Selected="sortNameZ" />
-            <ComboBoxItem Content="Price (Low to High)" Selected="sortPriceLow" />
-            <ComboBoxItem Content="Price (High to Low)" Selected="sortPriceHigh" />
-        </ComboBox>
-        
-        <!-- DIALOG MESSAGE -->
-        <TextBlock x:Name="dialogMessage" Grid.Row="3" Text="" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Top" Padding="0"  FontSize="15" Foreground="#FFEE2D24" />
 
+        <StackPanel Grid.Row="2">
+            <!-- SORTING -->
+            <Label x:Name="sortLabel" Content="Sort by:" Margin="0,0,0,0" Grid.ColumnSpan="2" />
+            <ComboBox x:Name="sortOptions" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="50,-20,0,0" Grid.ColumnSpan="2">
+                <ComboBoxItem x:Name="sortAZ"  Content="Name (A to Z)" Selected="sortNameA" />
+                <ComboBoxItem x:Name="sortZA"  Content="Name (Z to A)" Selected="sortNameZ" />
+                <ComboBoxItem x:Name="sortLoHi"  Content="Price (Low to High)" Selected="sortPriceLow" />
+                <ComboBoxItem x:Name="sortHiLo"  Content="Price (High to Low)" Selected="sortPriceHigh" />
+                <ComboBoxItem x:Name="sortLoc"  Content="Location" Selected="sortByLocation" />
+            </ComboBox>
+
+            <!-- FILTERING -->
+            <Label x:Name="filterLabel" Content="Filter by:" />
+            <CheckBox Margin="55,-20,0,0" x:Name="inStockFilter" Content="In Stock items" Checked="inStockChecked" Unchecked="inStockUnchecked" />
+            <CheckBox Margin="55,0,0,0" x:Name="bakeryFilter" Content="Bakery items" Checked="bakeryChecked" Unchecked="bakeryUnchecked" />
+            <CheckBox Margin="155,-35,0,0" x:Name="dairyFilter" Content="Dairy items" Checked="dairyChecked" Unchecked="dairyUnchecked" />
+            <CheckBox Margin="155,-15,0,0" x:Name="meatFilter" Content="Meat items" Checked="meatChecked" Unchecked="meatUnchecked" />
+            <CheckBox Margin="55,5,0,0" x:Name="produceFilter" Content="Produce items" Checked="produceChecked" Unchecked="produceUnchecked" />
+            <CheckBox Margin="155,-15,0,0" x:Name="allFilter" Content="Show all items" Checked="allChecked" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="3">
+            <!-- DIALOG MESSAGE -->
+            <TextBlock x:Name="dialogMessage" Text="" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Top" Padding="0"  FontSize="15" Foreground="#FFEE2D24" />
+            <!-- Location Label-->
+            <Label Name="locationLabel" Content="Location: " FontSize="15" Width="Auto" HorizontalContentAlignment="Right" Margin="0,0,5,0"  Visibility="Hidden" />
+        </StackPanel>
+        
         <!-- LIST OF RESULTS -->
         <ScrollViewer Grid.Row="4" VerticalScrollBarVisibility="Auto" MouseWheel="scrollMouse">
             <ListBox Control.MouseDoubleClick="itemClick" Name="resultsListBox" Canvas.Left="0" Canvas.Top="40" HorizontalContentAlignment="Stretch" BorderBrush="{x:Null}" Height="Auto" SelectionChanged="itemClick">

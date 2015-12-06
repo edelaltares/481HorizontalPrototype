@@ -25,7 +25,7 @@ namespace ItemLocator
         {
             InitializeComponent();
         }
-        
+
         private void searchBox_MouseEnter(object sender, MouseEventArgs e)
         {
 
@@ -44,7 +44,7 @@ namespace ItemLocator
 
             Results newResult = new Results(result, keywords);
 
-            MainWindow main = (MainWindow) Window.GetWindow(this);
+            MainWindow main = (MainWindow)Window.GetWindow(this);
 
             main.newPage(newResult);
         }
@@ -60,9 +60,14 @@ namespace ItemLocator
 
             int size = itemsList.Length;
 
-            for(int i=0; i < size; i++)
+            for (int i = 0; i < size; i++)
             {
                 if (itemsList[i].name.ToLower().Contains(keywords.ToLower()))
+                {
+                    searchList.Add(itemsList[i]);
+                }
+
+                if (keywords.ToLower().Contains(itemsList[i].name.ToLower()))
                 {
                     searchList.Add(itemsList[i]);
                 }
@@ -84,7 +89,7 @@ namespace ItemLocator
             searchBox.Text = "";
             clearButton.Visibility = Visibility.Collapsed;
         }
-        
+
         private void newSearchKey(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)

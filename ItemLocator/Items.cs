@@ -114,10 +114,12 @@ namespace ItemLocator
             if(stock)
             {
                 getAvailability = "In Stock";
+                inStock = true;
             }
             else
             {
                 getAvailability = "Out of Stock";
+                inStock = false;
             }
 
             if (newSalePrice != 0)
