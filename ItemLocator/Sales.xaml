@@ -12,6 +12,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
@@ -43,11 +44,11 @@
             <!-- DIALOG MESSAGE -->
             <TextBlock x:Name="dialogMessage" Text="" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Top" Padding="0"  FontSize="15" Foreground="#FFEE2D24" />
             <!-- Location Label-->
-            <Label Name="locationLabel" Content="Location: " FontSize="15" Width="Auto" HorizontalContentAlignment="Right" Margin="0,0,5,0"  Visibility="Hidden" />
+            <Label Name="locationLabel" Content="Location: " FontSize="15" Width="Auto" HorizontalContentAlignment="Right" Margin="0,0,5,0" />
         </StackPanel>
         
         <!-- LIST OF RESULTS -->
-        <ScrollViewer Grid.Row="3" VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" Margin="0,0,0,0">
+        <ScrollViewer Grid.Row="4" VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" Margin="0,0,0,0">
             <ListBox Name="salesListBox" Canvas.Left="0" Margin="0,0,0,0" HorizontalContentAlignment="Stretch" BorderBrush="{x:Null}" SelectionChanged="itemClick">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>

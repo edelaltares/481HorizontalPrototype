@@ -85,6 +85,8 @@ namespace ItemLocator
 
         private void itemClick(object sender, RoutedEventArgs e)
         {
+            Console.WriteLine("DEBUG:" + sender.GetType().ToString());
+
             MainWindow main = (MainWindow) Window.GetWindow(this);
             
             Results_Map itemMap = new Results_Map((Items) resultsListBox.SelectedItem);

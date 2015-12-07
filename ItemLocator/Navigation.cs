@@ -40,7 +40,7 @@ namespace ItemLocator
             ContentContainer.Children.Add(userControl);
         }
 
-        private static void BackButton_Click(object sender, RoutedEventArgs e)
+        public static void BackButton_Click(object sender, RoutedEventArgs e)
         {
             ContentContainer.Children.Clear();
             ContentContainer.Children.Add(navStack.Pop());

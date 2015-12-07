@@ -7,11 +7,14 @@
              mc:Ignorable="d" 
              d:DesignHeight="520" d:DesignWidth="340">
     <Grid x:Name="theGrid" Width="330">
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="90" />
             <RowDefinition Height="*" />
             <RowDefinition Height="40" />
         </Grid.RowDefinitions>
+
+        <TextBlock x:Name="errorLabel" Padding="5" Text="Something went wrong. Please go back and try again." FontSize="18.667" Visibility="Hidden" TextWrapping="Wrap" />
 
         <Grid Grid.Row="0" x:Name="ItemGrid" Margin="0,0,0,0" Background="#FFE2E2E2">
             <Grid.ColumnDefinitions>
@@ -38,6 +41,6 @@
         </Grid>
 
         <Button x:Name="fullMapButton" Grid.Row="2" Content="SEE FULL MAP" Padding="10" Margin="10,0,10,0" Background="#FFEE2D24" Foreground="White" Click="fullMapButton_Click" />
-        <Label Content="Your item is located here:" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Height="45" Width="330" FontSize="18.667" />
+        <Label x:Name="mapLabel" Content="Your item is located here:" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Height="45" Width="330" FontSize="18.667" />
     </Grid>
 </UserControl>
