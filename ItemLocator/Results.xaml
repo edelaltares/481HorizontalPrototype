@@ -44,11 +44,11 @@
             <!-- FILTERING -->
             <Label x:Name="filterLabel" Content="Filter by:" />
             <CheckBox Margin="55,-20,0,0" x:Name="inStockFilter" Content="In Stock items" Checked="inStockChecked" Unchecked="inStockUnchecked" />
-            <CheckBox Margin="55,0,0,0" x:Name="bakeryFilter" Content="Bakery items" Checked="bakeryChecked" Unchecked="bakeryUnchecked" />
-            <CheckBox Margin="155,-35,0,0" x:Name="dairyFilter" Content="Dairy items" Checked="dairyChecked" Unchecked="dairyUnchecked" />
-            <CheckBox Margin="155,-15,0,0" x:Name="meatFilter" Content="Meat items" Checked="meatChecked" Unchecked="meatUnchecked" />
-            <CheckBox Margin="55,5,0,0" x:Name="produceFilter" Content="Produce items" Checked="produceChecked" Unchecked="produceUnchecked" />
-            <CheckBox Margin="155,-15,0,0" x:Name="allFilter" Content="Show all items" Checked="allChecked" />
+            <RadioButton Margin="55,0,0,0" x:Name="bakeryFilter" Content="Bakery items" Checked="bakeryChecked" />
+            <RadioButton Margin="155,-35,0,0" x:Name="dairyFilter" Content="Dairy items" Checked="dairyChecked" />
+            <RadioButton Margin="155,-15,0,0" x:Name="meatFilter" Content="Meat items" Checked="meatChecked" />
+            <RadioButton Margin="55,5,0,0" x:Name="produceFilter" Content="Produce items" Checked="produceChecked" />
+            <RadioButton Margin="155,-15,0,0" x:Name="allFilter" Content="Show all items" Checked="allChecked" />
         </StackPanel>
 
         <StackPanel Grid.Row="3">

@@ -18,15 +18,26 @@
         <!-- LABEL -->
         <Label x:Name="salesLabel" Grid.Row="0" Content="Sales" HorizontalAlignment="Left" Margin="10,10,0,0" Width="160" VerticalAlignment="Center" Padding="0" FontSize="20" Grid.ColumnSpan="2" />
 
-        <!-- FILTERS -->
-        <Label x:Name="sortLabel" Grid.Row="1" Content="Sort by:" Margin="0,0,0,0" Grid.ColumnSpan="2" />
-        <ComboBox x:Name="sortOptions" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="50,3,0,0" Grid.ColumnSpan="2">
-            <ComboBoxItem Content="Name (A to Z)" Selected="sortNameA" />
-            <ComboBoxItem Content="Name (Z to A)" Selected="sortNameZ" />
-            <ComboBoxItem Content="Price (Low to High)" Selected="sortPriceLow" />
-            <ComboBoxItem Content="Price (High to Low)" Selected="sortPriceHigh" />
-            <ComboBoxItem Content="Location" Selected="sortByLocation" />
-        </ComboBox>
+        <StackPanel Grid.Row="2">
+            <!-- SORTING -->
+            <Label x:Name="sortLabel" Content="Sort by:" Margin="0,0,0,0" Grid.ColumnSpan="2" />
+            <ComboBox x:Name="sortOptions" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="50,-20,0,0" Grid.ColumnSpan="2">
+                <ComboBoxItem x:Name="sortAZ"  Content="Name (A to Z)" Selected="sortNameA" />
+                <ComboBoxItem x:Name="sortZA"  Content="Name (Z to A)" Selected="sortNameZ" />
+                <ComboBoxItem x:Name="sortLoHi"  Content="Price (Low to High)" Selected="sortPriceLow" />
+                <ComboBoxItem x:Name="sortHiLo"  Content="Price (High to Low)" Selected="sortPriceHigh" />
+                <ComboBoxItem x:Name="sortLoc"  Content="Location" Selected="sortByLocation" />
+            </ComboBox>
+
+            <!-- FILTERING -->
+            <Label x:Name="filterLabel" Content="Filter by:" />
+            <CheckBox Margin="55,-20,0,0" x:Name="inStockFilter" Content="In Stock items" Checked="inStockChecked" Unchecked="inStockUnchecked" />
+            <RadioButton Margin="55,0,0,0" x:Name="bakeryFilter" Content="Bakery items" Checked="bakeryChecked" />
+            <RadioButton Margin="155,-35,0,0" x:Name="dairyFilter" Content="Dairy items" Checked="dairyChecked" />
+            <RadioButton Margin="155,-15,0,0" x:Name="meatFilter" Content="Meat items" Checked="meatChecked" />
+            <RadioButton Margin="55,5,0,0" x:Name="produceFilter" Content="Produce items" Checked="produceChecked" />
+            <RadioButton Margin="155,-15,0,0" x:Name="allFilter" Content="Show all items" Checked="allChecked" />
+        </StackPanel>
 
         <StackPanel Grid.Row="3">
             <!-- DIALOG MESSAGE -->

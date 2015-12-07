@@ -230,37 +230,35 @@ namespace ItemLocator
             }
         }
 
-        /* DAiRY CHECKED */
+        /* DAIRY CHECKED */
         private void dairyChecked(object sender, RoutedEventArgs e)
         {
             if (resultList != null)
             {
-                if (allFilter.IsChecked.Value)
-                {
-                    allFilter.IsChecked = false;
-                }
-
                 List<Items> newResultList = new List<Items>();
-                int resultsize = resultList.Count;
+                int resultsize = initResults.Count;
                 for (int i = 0; i < resultsize; i++)
                 {
-                    newResultList.Add(resultList.ElementAt(i));
+                    newResultList.Add(initResults.ElementAt(i));
                 }
 
-                if ((sender as CheckBox).Content.Equals("Dairy items"))
+                if ((sender as RadioButton).Content.Equals("Dairy items"))
                 {
-                    int size = resultList.Count;
+                    int size = initResults.Count;
 
                     for (int i = 0; i < size; i++)
                     {
-                        if (!resultList.ElementAt(i).location.Contains("Dairy"))
+                        if (!initResults.ElementAt(i).location.Contains("Dairy"))
                         {
-                            newResultList.Remove(resultList.ElementAt(i));
-
-                            resultsListBox.ItemsSource = newResultList;
+                            newResultList.Remove(initResults.ElementAt(i));
+                        }
+                        else if(inStockFilter.IsChecked.Value && !initResults.ElementAt(i).inStock)
+                        {
+                            newResultList.Remove(initResults.ElementAt(i));
                         }
                     }
 
+                    resultsListBox.ItemsSource = newResultList;
                     resultList = newResultList;
                 }
             }
@@ -271,32 +269,30 @@ namespace ItemLocator
         {
             if (resultList != null)
             {
-                if (allFilter.IsChecked.Value)
-                {
-                    allFilter.IsChecked = false;
-                }
-
                 List<Items> newResultList = new List<Items>();
-                int resultsize = resultList.Count;
+                int resultsize = initResults.Count;
                 for (int i = 0; i < resultsize; i++)
                 {
-                    newResultList.Add(resultList.ElementAt(i));
+                    newResultList.Add(initResults.ElementAt(i));
                 }
 
-                if ((sender as CheckBox).Content.Equals("Bakery items"))
+                if ((sender as RadioButton).Content.Equals("Bakery items"))
                 {
-                    int size = resultList.Count;
+                    int size = initResults.Count;
 
                     for (int i = 0; i < size; i++)
                     {
-                        if (!resultList.ElementAt(i).location.Contains("Bakery"))
+                        if (!initResults.ElementAt(i).location.Contains("Bakery"))
                         {
-                            newResultList.Remove(resultList.ElementAt(i));
-
-                            resultsListBox.ItemsSource = newResultList;
+                            newResultList.Remove(initResults.ElementAt(i));
+                        }
+                        else if (inStockFilter.IsChecked.Value && !initResults.ElementAt(i).inStock)
+                        {
+                            newResultList.Remove(initResults.ElementAt(i));
                         }
                     }
 
+                    resultsListBox.ItemsSource = newResultList;
                     resultList = newResultList;
                 }
             }
@@ -307,33 +303,30 @@ namespace ItemLocator
         {
             if (resultList != null)
             {
-                if (allFilter.IsChecked.Value)
-                {
-                    allFilter.IsChecked = false;
-                }
-
                 List<Items> newResultList = new List<Items>();
-                int resultsize = resultList.Count;
+                int resultsize = initResults.Count;
                 for (int i = 0; i < resultsize; i++)
                 {
-                    newResultList.Add(resultList.ElementAt(i));
+                    newResultList.Add(initResults.ElementAt(i));
                 }
 
-
-                if ((sender as CheckBox).Content.Equals("Meat items"))
+                if ((sender as RadioButton).Content.Equals("Meat items"))
                 {
-                    int size = resultList.Count;
+                    int size = initResults.Count;
 
                     for (int i = 0; i < size; i++)
                     {
-                        if (!resultList.ElementAt(i).location.Contains("Meat"))
+                        if (!initResults.ElementAt(i).location.Contains("Meat"))
                         {
-                            newResultList.Remove(resultList.ElementAt(i));
-
-                            resultsListBox.ItemsSource = newResultList;
+                            newResultList.Remove(initResults.ElementAt(i));
+                        }
+                        else if (inStockFilter.IsChecked.Value && !initResults.ElementAt(i).inStock)
+                        {
+                            newResultList.Remove(initResults.ElementAt(i));
                         }
                     }
 
+                    resultsListBox.ItemsSource = newResultList;
                     resultList = newResultList;
                 }
             }
@@ -344,32 +337,30 @@ namespace ItemLocator
         {
             if (resultList != null)
             {
-                if (allFilter.IsChecked.Value)
-                {
-                    allFilter.IsChecked = false;
-                }
-
                 List<Items> newResultList = new List<Items>();
-                int resultsize = resultList.Count;
+                int resultsize = initResults.Count;
                 for (int i = 0; i < resultsize; i++)
                 {
-                    newResultList.Add(resultList.ElementAt(i));
+                    newResultList.Add(initResults.ElementAt(i));
                 }
 
-                if ((sender as CheckBox).Content.Equals("Produce items"))
+                if ((sender as RadioButton).Content.Equals("Produce items"))
                 {
-                    int size = resultList.Count;
+                    int size = initResults.Count;
 
                     for (int i = 0; i < size; i++)
                     {
-                        if (!resultList.ElementAt(i).location.Contains("Produce"))
+                        if (!initResults.ElementAt(i).location.Contains("Produce"))
                         {
-                            newResultList.Remove(resultList.ElementAt(i));
-
-                            resultsListBox.ItemsSource = newResultList;
+                            newResultList.Remove(initResults.ElementAt(i));
+                        }
+                        else if (inStockFilter.IsChecked.Value && !initResults.ElementAt(i).inStock)
+                        {
+                            newResultList.Remove(initResults.ElementAt(i));
                         }
                     }
 
+                    resultsListBox.ItemsSource = newResultList;
                     resultList = newResultList;
                 }
             }
@@ -407,123 +398,7 @@ namespace ItemLocator
                 resultList = newResultList;
             }
         }
-
-        /* DAIRY UNCHECKED */
-        private void dairyUnchecked(object sender, RoutedEventArgs e)
-        {
-            List<Items> newResultList = new List<Items>();
-            int resultsize = resultList.Count;
-            for (int i = 0; i < resultsize; i++)
-            {
-                newResultList.Add(resultList.ElementAt(i));
-            }
-
-            if ((sender as CheckBox).Content.Equals("Dairy items"))
-            {
-                int size = initResults.Count;
-
-                for (int i = 0; i < size; i++)
-                {
-                    if (!initResults.ElementAt(i).location.Contains("Dairy"))
-                    {
-                        if(inStockFilter.IsChecked.Value && !initResults.ElementAt(i).inStock)
-                        {
-                            continue;
-                        }
-
-                        newResultList.Add(initResults.ElementAt(i));
-                    }
-                }
-                resultsListBox.ItemsSource = newResultList;
-
-                resultList = newResultList;
-            }
-        }
-
-        /* BAKERY UNCHECKED */
-        private void bakeryUnchecked(object sender, RoutedEventArgs e)
-        {
-            List<Items> newResultList = new List<Items>();
-            int resultsize = resultList.Count;
-            for (int i = 0; i < resultsize; i++)
-            {
-                newResultList.Add(resultList.ElementAt(i));
-            }
-
-            if ((sender as CheckBox).Content.Equals("Bakery items"))
-            {
-                int size = initResults.Count;
-
-                for (int i = 0; i < size; i++)
-                {
-                    if (!initResults.ElementAt(i).location.Contains("Bakery"))
-                    {
-                        newResultList.Add(initResults.ElementAt(i));
-
-                    }
-                }
-                resultsListBox.ItemsSource = newResultList;
-
-                resultList = newResultList;
-            }
-        }
-
-        /* MEAT UNCHECKED */
-        private void meatUnchecked(object sender, RoutedEventArgs e)
-        {
-            List<Items> newResultList = new List<Items>();
-            int resultsize = resultList.Count;
-            for (int i = 0; i < resultsize; i++)
-            {
-                newResultList.Add(resultList.ElementAt(i));
-            }
-
-            if ((sender as CheckBox).Content.Equals("Meat items"))
-            {
-                int size = initResults.Count;
-
-                for (int i = 0; i < size; i++)
-                {
-                    if (!initResults.ElementAt(i).location.Contains("Meat"))
-                    {
-                        newResultList.Add(initResults.ElementAt(i));
-
-                    }
-                }
-                resultsListBox.ItemsSource = newResultList;
-
-                resultList = newResultList;
-            }
-        }
-
-        /* PRODUCE UNCHECKED */
-        private void produceUnchecked(object sender, RoutedEventArgs e)
-        {
-            List<Items> newResultList = new List<Items>();
-            int resultsize = resultList.Count;
-            for (int i = 0; i < resultsize; i++)
-            {
-                newResultList.Add(resultList.ElementAt(i));
-            }
-
-            if ((sender as CheckBox).Content.Equals("Produce items"))
-            {
-                int size = initResults.Count;
-
-                for (int i = 0; i < size; i++)
-                {
-                    if (!initResults.ElementAt(i).location.Contains("Produce"))
-                    {
-                        newResultList.Add(initResults.ElementAt(i));
-
-                    }
-                }
-                resultsListBox.ItemsSource = newResultList;
-
-                resultList = newResultList;
-            }
-        }
-
+        
         private void clearSearch(object sender, RoutedEventArgs e)
         {
             resultSearch.Text = "";
